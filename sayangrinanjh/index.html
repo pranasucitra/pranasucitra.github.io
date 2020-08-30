@@ -9,14 +9,17 @@
 
 <body>
     <!-- main clip -->
-    <audio id="my_audio" src="GellenMartadinata_SelamatUlangTahun.mp3" loop="loop"></audio>
+    <audio id="my_audio" loop="loop">
+        <source src="GellenMartadinata_SelamatUlangTahun.mp3" type="audio/mp3" preload="auto" />
+    </audio>
+    <!-- src="GellenMartadinata_SelamatUlangTahun.mp3" -->
 
     <div id="header-plugin"></div>
     <div class="bg_heart"></div>
 
     <div class="panel">
-        <div>
-            <?php include("Happy_birthday_lovely_5826.svg");?>
+        <div> 
+            <img src="Happy_birthday_lovely_5826.svg" alt="Kiwi standing on oval">
         </div>
     </div>
 </body>
@@ -53,7 +56,7 @@ body {
     text-align: center;
 }
 
-.panel>div>svg {
+.panel>div>img {
     margin-top: -40px;
     width: 280px;
 }
