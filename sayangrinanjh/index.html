@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script type="text/javascript" src="jquery1.10.2.js"></script>
+    <script type="text/javascript" src="swiped-events.js"></script>
 
     <title>Happy Birthday Sayang</title>
 </head>
@@ -166,15 +167,38 @@
 
     // AUDIO
     $(document).ready(function () {
-        $("#my_audio").get(0).play();
-        $("#my_audio").prop("volume", 0).animate({
-            volume: 0.1
-        }, 6000);
 
-      
-        var mp3 = e.target;
-        mp3.parentNode.getElementsByTagName('audio')[0].play();
-        
+        function _play() {
+            $("#my_audio").get(0).play();
+            $("#my_audio").prop("volume", 0).animate({
+                volume: 0.1
+            }, 6000);
+        }
+
+
+        // FUNCTION DETECT SWIPE EVENTS (swiped-event.js)
+
+        document.addEventListener('swiped-left', function (e) {
+            // alert("LEFT");
+            _play();
+        });
+
+        document.addEventListener('swiped-right', function (e) {
+            // alert("RIGHT");
+            _play();
+        });
+
+        document.addEventListener('swiped-up', function (e) {
+            // alert("UP");
+            // enableScroll();
+            _play();
+        });
+
+        document.addEventListener('swiped-down', function (e) {
+            // alert("DOWN");
+            _play();
+        });
+
     });
 
 
