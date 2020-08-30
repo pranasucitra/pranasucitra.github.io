@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script type="text/javascript" src="jquery1.10.2.js"></script>
-    <script type="text/javascript" src="swiped-events.js"></script>
 
     <title>Happy Birthday Sayang</title>
 </head>
@@ -23,7 +22,8 @@
 
     <div class="panel">
         <div>
-            <img src="Happy_birthday_lovely_5826.svg" alt="Kiwi standing on oval">
+            <img src="Happy_birthday_lovely_5826.svg" alt="Kiwi standing on oval"
+                onclick="document.getElementById('my_audio').play();">
         </div>
     </div>
 </body>
@@ -168,39 +168,10 @@
     // AUDIO
     $(document).ready(function () {
 
-        function _play() {
-            $("#my_audio").get(0).play();
-            $("#my_audio").prop("volume", 0).animate({
-                volume: 0.1
-            }, 6000);
-        }
-
-
-        // FUNCTION DETECT SWIPE EVENTS (swiped-event.js)
-
-        document.addEventListener('swiped-left', function (e) {
-            // alert("LEFT");
-            _play();
-        });
-
-        document.addEventListener('swiped-right', function (e) {
-            // alert("RIGHT");
-            _play();
-        });
-
-        document.addEventListener('swiped-up', function (e) {
-            // alert("UP");
-            // enableScroll();
-            _play();
-        });
-
-        document.addEventListener('swiped-down', function (e) {
-            // alert("DOWN");
-            _play();
-        });
+        $("#my_audio").get(0).play();
+        $("#my_audio").prop("volume", 0).animate({
+            volume: 0.1
+        }, 6000);
 
     });
-
-
-
 </script>
