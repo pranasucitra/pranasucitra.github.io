@@ -171,13 +171,10 @@
             volume: 0.1
         }, 6000);
 
-        document.getElementById('my_audio').addEventListener("mouseup", tapOrClick, false);
-        document.getElementById('my_audio').addEventListener("touchend", tapOrClick, false);
-
-        function tapOrClick(e) {
-            var mp3 = e.target;
-            mp3.parentNode.getElementsByTagName('audio')[0].play();
-        }
+      
+        var mp3 = e.target;
+        mp3.parentNode.getElementsByTagName('audio')[0].play();
+        
     });
 
 
