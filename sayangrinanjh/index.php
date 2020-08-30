@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<head>
+
+    <script type="text/javascript" src="jquery1.10.2.js"></script>
+
+    <title>Happy Birthday Sayang</title>
+</head>
+
+<body>
+    <!-- main clip -->
+    <audio id="my_audio" src="GellenMartadinata_SelamatUlangTahun.mp3" loop="loop"></audio>
+
+    <div id="header-plugin"></div>
+    <div class="bg_heart"></div>
+
+    <div class="panel">
+        <div>
+            <?php include("Happy_birthday_lovely_5826.svg");?>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<style>
+html,
+body {
+    height: 100vh;
+    margin: 0px;
+    background-color: black;
+}
+
+.panel {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: 10;
+    top: 0;
+    display: flex;
+}
+
+.panel>div {
+    margin: auto;
+    /* border: 3px dotted pink; */
+    width: 90%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 60px;
+    text-align: center;
+}
+
+.panel>div>svg {
+    margin-top: -40px;
+    width: 280px;
+}
+
+.bg_heart {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+.heart {
+    z-index: 5;
+    position: absolute;
+    top: -50%;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -m-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+}
+
+.heart:before {
+    z-index: 5;
+    position: absolute;
+    top: -50%;
+    left: 0;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 100%;
+}
+
+.heart:after {
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    right: -50%;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 100%;
+}
+
+@-webkit-keyframes love {
+    0% {
+        top: 110%
+    }
+}
+
+@-moz-keyframes love {
+    0% {
+        top: 110%
+    }
+}
+
+@-ms-keyframes love {
+    0% {
+        top: 110%
+    }
+}
+
+@keyframes love {
+    0% {
+        top: 110%
+    }
+}
+</style>
+
+
+<script>
+// LOVE
+var love = setInterval(function() {
+    var r_num = Math.floor(Math.random() * 10) + 1;
+    var r_size = Math.floor(Math.random() * 35) + 10;
+    var r_left = Math.floor(Math.random() * 100) + 1;
+    var r_bg = Math.floor(Math.random() * 25) + 100;
+    var r_time = Math.floor(Math.random() * 10) + 25;
+
+    $('.bg_heart').append("<div class='heart' style='width:" + r_size + "px;height:" + r_size + "px;left:" +
+        r_left + "%;background:rgba(255," + (r_bg - 25) + "," + r_bg + ",1);-webkit-animation:love " +
+        r_time + "s ease;-moz-animation:love " + r_time + "s ease;-ms-animation:love " + r_time +
+        "s ease;animation:love " + r_time + "s ease'></div>");
+
+    $('.bg_heart').append("<div class='heart' style='width:" + (r_size - 10) + "px;height:" + (r_size - 10) +
+        "px;left:" + (r_left + r_num) + "%;background:rgba(255," + (r_bg - 25) + "," + (r_bg + 25) +
+        ",1);-webkit-animation:love " + (r_time + 5) + "s ease;-moz-animation:love " + (r_time + 5) +
+        "s ease;-ms-animation:love " + (r_time + 5) + "s ease;animation:love " + (r_time + 5) +
+        "s ease'></div>");
+
+    $('.heart').each(function() {
+        var top = $(this).css("top").replace(/[^-\d\.]/g, '');
+        var width = $(this).css("width").replace(/[^-\d\.]/g, '');
+        if (top <= -100 || width >= 150) {
+            $(this).detach();
+        }
+    });
+}, 500);
+
+// AUDIO
+$(document).ready(function() {
+    $("#my_audio").get(0).play();
+    $("#my_audio").prop("volume", 0).animate({
+        volume: 0.1
+    }, 6000);
+});
+</script>
