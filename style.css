@@ -14,7 +14,7 @@
     width: 5vh;
     height: 5vh;
     border-radius: 50%;
-    background: #dfdfc2;
+    background: #fff;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -34,7 +34,7 @@
     width: 10vh;
     height: 10vh;
     border-radius: 50%;
-    border: solid 1.3vh #dfdfc2;
+    border: solid 1.3vh #fff;
     border-right: solid 1.3vh rgba(223, 223, 194, 0);
     border-left: solid 1.3vh rgba(223, 223, 194, 0);
     border-bottom: solid 1.3vh rgba(223, 223, 194, 0);
@@ -364,10 +364,10 @@ body,
     background: #f5d410;
 }
 
-#t2:target #p2,
-#t3:target #p3,
-#t4:target #p4,
-#t5:target #p5 {
+#code:target #p2,
+#design:target #p3,
+#friend:target #p4,
+#diamondhand:target #p5 {
     transform: translateX(-190%);
     -webkit-transform: translateX(-190%);
     -moz-transform: translateX(-190%);
@@ -375,17 +375,17 @@ body,
     transition-delay: .4s !important;
 }
 
-#t2:target #p1,
-#t3:target #p1,
-#t4:target #p1,
-#t5:target #p1 {
+#code:target #p1,
+#design:target #p1,
+#friend:target #p1,
+#diamondhand:target #p1 {
     background: black;
 }
 
-#t2:target #p1 .icon,
-#t3:target #p1 .icon,
-#t4:target #p1 .icon,
-#t5:target #p1 .icon {
+#code:target #p1 .icon,
+#design:target #p1 .icon,
+#friend:target #p1 .icon,
+#diamondhand:target #p1 .icon {
     -webkit-filter: blur(3px);
 }
 
@@ -408,10 +408,11 @@ ul .icon:hover {
     line-height: 1.2em;
 }
 
-#t2:target ul .icon,
-#t3:target ul .icon,
-#t4:target ul .icon,
-#t5:target ul .icon {
+#icon-me:target ul .icon,
+#code:target ul .icon,
+#design:target ul .icon,
+#friend:target ul .icon,
+#diamondhand:target ul .icon {
     transform: scale(.6);
     -webkit-transform: scale(.6);
     -moz-transform: scale(.6);
@@ -419,10 +420,11 @@ ul .icon:hover {
     transition-delay: .25s;
 }
 
-#t2:target #dos,
-#t3:target #tres,
-#t4:target #cuatro,
-#t5:target #cinco {
+#me:target #icon-me,
+#code:target #dos,
+#design:target #tres,
+#friend:target #cuatro,
+#diamondhand:target #cinco {
     transform: scale(1.2) !important;
     -webkit-transform: scale(1.2) !important;
     -moz-transform: scale(1.2) !important;
@@ -528,10 +530,10 @@ a {
     transform: translateX(10%) !important;
 }
 
-#t2:target .page#p2 .icon,
-#t3:target .page#p3 .icon,
-#t4:target .page#p4 .icon,
-#t5:target .page#p5 .icon {
+#code:target .page#p2 .icon,
+#design:target .page#p3 .icon,
+#friend:target .page#p4 .icon,
+#diamondhand:target .page#p5 .icon {
     transform: translateX(0) !important;
     -webkit-transform: translateX(0) !important;
     -moz-transform: translateX(0) !important;
