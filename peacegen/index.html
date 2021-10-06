@@ -4,23 +4,17 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>pancar | Peacegen</title>
-
-  <style>
-    html {
-      overflow: hidden;
-    }
-  </style>
+  <title>Pancar | Peacegen</title>
 </head>
 
-<body style="text-align: center; padding: 0px; margin: 0px;">
-  <canvas id="unity-canvas" style="display: table; width: 100%; height: 100%; background: #000000"></canvas>
+<body style="text-align: center; margin: 0px;">
+  <canvas id="unity-canvas" style="width: 100%; height: 100%; background: #231F20"></canvas>
   <script src="Build/BUILD.loader.js"></script>
   <script>
     createUnityInstance(document.querySelector("#unity-canvas"), {
-      dataUrl: "Build/_BUILD.data",
-      frameworkUrl: "Build/_BUILD.framework.js",
-      codeUrl: "Build/_BUILD.wasm",
+      dataUrl: "Build/BUILD.data",
+      frameworkUrl: "Build/BUILD.framework.js",
+      codeUrl: "Build/BUILD.wasm",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "pancar",
       productName: "Peacegen",
