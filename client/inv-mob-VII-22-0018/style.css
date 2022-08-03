@@ -1,0 +1,319 @@
+/*===== VARIABLES CSS =====*/
+:root {
+    /*===== Colors =====*/
+    --green-color: #65C97B;
+    --red-color: #c96565;
+    --grey-color: #333333;
+
+    /*===== Font and typography =====*/
+    --body-font: 'Poppins', sans-serif;
+    --normal-font-size: 0.9rem;
+
+    --line-height: 5px;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--body-font);
+}
+
+
+
+#wrapper {
+    /* border: 1px solid red; */
+    /* width: 100%; */
+    height: 100vh;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+
+.line {
+    width: 100%;
+    height: var(--line-height);
+    display: flex;
+}
+
+
+.line-green {
+    background-color: var(--green-color);
+    width: 70%;
+    height: var(--line-height);
+}
+
+.line-grey {
+    background-color: var(--grey-color);
+    width: 30%;
+    height: var(--line-height);
+}
+
+.header {
+    margin-top: 40px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    align-items: center;
+    display: flex;
+}
+
+.inv-number {
+    align-items: center;
+    display: flex;
+    font-family: var(--body-font);
+    flex-direction: column;
+    line-height: 1.2em;
+}
+
+.inv-number>div:nth-child(1) {
+    letter-spacing: 0.13em;
+    font-size: 1.6em;
+    font-weight: 500;
+    align-items: center;
+}
+
+.inv-number>div:nth-child(2) {
+    font-size: 0.77em;
+    font-weight: 500;
+}
+
+.logo img {
+    width: 52px;
+}
+
+.logo-name {
+    font-weight: bold;
+    font-size: 1.2em;
+    /* letter-spacing: 0.1rem; */
+    margin-left: 8px;
+    line-height: 0.80em;
+}
+
+.logo-name>div:nth-child(1) {
+    color: var(--grey-color);
+}
+
+.logo-name>div:nth-child(2) {
+    color: var(--green-color);
+    font-weight: 500;
+    font-size: 0.68em;
+}
+
+.status-paids {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: end;
+}
+
+.status-paids>div:nth-child(1) {
+    color: var(--grey-color);
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.status-paid {
+    color: var(--green-color);
+    font-size: 0.8em;
+    font-weight: 800;
+}
+
+.status-unpaid{
+    color: var(--red-color);
+    font-size: 0.8em;
+    font-weight: 800;
+}
+
+.status-paid-date{
+    color: var(--grey-color);
+    font-size: 0.8em;
+    font-weight: 800;
+}
+
+.form-info {
+    margin-top: 30px;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+table tr th {
+    text-align: left;
+    color: var(--green-color);
+    font-size: 0.82em;
+}
+
+/* ======= */
+table,
+tr,
+td,
+th {
+    /* border: 1px solid red; */
+
+}
+
+.line-border {
+    background-color: var(--green-color);
+    height: 2px;
+    width: 200px;
+}
+
+.td-title {
+    font-weight: 700;
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+.td-title-object {
+    font-weight: 700;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.td-fill {
+    font-size: 0.7em;
+}
+
+.tgl-invoice {
+    display: flex;
+}
+
+.tgl-invoice>div:nth-child(1) {
+    width: 150px;
+}
+
+.td-fill-address {
+    font-size: 0.7em;
+    margin-right: 20%;
+}
+
+.bx {
+    font-size: 1.5em !important;
+}
+
+.td-number {
+    font-size: 0.7em;
+    display: flex;
+    padding-top: 5px;
+}
+
+.td-email {
+    font-size: 0.7em;
+    display: flex;
+    padding-top: 5px;
+}
+
+.td-email a{
+    font-variant: normal;
+    color: var(--green-color);
+}
+
+.td-site {
+    font-size: 0.7em;
+    display: flex;
+    padding-top: 5px;
+}
+
+.td-site a {
+    font-variant: normal;
+    color: var(--green-color);
+}
+
+.table-work {
+    /* border: 1px solid; */
+}
+
+.table-work th {
+    color: var(--grey-color);
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 500;
+    font-size: 0.7em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.table-work td{
+    font-size: 0.7em;
+    padding: 10px;
+}
+
+.bg-th{
+    background-color: #ddd;}
+.bg-td{
+    background-color: #eee;}
+.bg-green{
+        background-color: #c6f8d1}
+.bg-yellow{
+    background-color: #fae6b9}
+
+
+
+.transfer>div:nth-child(1){
+    color: var(--green-color);
+    font-style: italic;
+    font-size: 0.75em;
+    font-weight: 500;
+}
+
+.transfer>div:nth-child(2){
+    font-size: 0.75em;
+    font-weight: 700;
+}
+
+.transfer>div:nth-child(3){
+    font-size: 0.75em;
+    color: var(--grey-color);
+    font-weight: 500;
+}
+.transfer>div:nth-child(3) span{
+    color: var(--green-color);
+}
+.transfer>div:nth-child(4){
+    font-size: 0.75em;
+    color: var(--grey-color);
+    font-weight: 500;
+}
+.transfer>div:nth-child(4) span{
+    color: var(--green-color);
+}
+.transfer>div:nth-child(5){
+    font-size: 0.75em;
+    color: var(--grey-color);
+    font-weight: 500;
+}
+.transfer>div:nth-child(5) span{
+    color: var(--green-color);
+}
+
+.signature{
+    text-align: center;
+}
+.signature>div>img{
+width: 120px;
+}
+
+.signature>div:nth-child(2){
+    font-size: 0.8em;
+    font-weight: 800;
+    margin-top: -10px;
+}
+.signature>div:nth-child(3){
+    margin-top: 5px;
+    font-size: 0.7em;
+    line-height: 1.2em;
+}
+
+.footer{
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+    align-items: center;
+}
