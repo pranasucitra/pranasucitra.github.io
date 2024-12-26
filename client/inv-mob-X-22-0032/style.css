@@ -123,6 +123,14 @@ body {
 
 .status-unpaid{
     color: var(--red-color);
+    font-size: 0.8em;
+    font-weight: 800;
+}
+
+.status-paid-date{
+    color: var(--grey-color);
+    font-size: 0.8em;
+    font-weight: 800;
 }
 
 .form-info {
@@ -202,6 +210,11 @@ th {
     padding-top: 5px;
 }
 
+.td-email a{
+    font-variant: normal;
+    color: var(--green-color);
+}
+
 .td-site {
     font-size: 0.7em;
     display: flex;
@@ -256,7 +269,7 @@ th {
 }
 
 .transfer>div:nth-child(3){
-    font-size: 0.75em;
+    font-size: 0.8em;
     color: var(--grey-color);
     font-weight: 500;
 }
@@ -264,7 +277,7 @@ th {
     color: var(--green-color);
 }
 .transfer>div:nth-child(4){
-    font-size: 0.75em;
+    font-size: 0.8em;
     color: var(--grey-color);
     font-weight: 500;
 }

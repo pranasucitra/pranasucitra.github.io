@@ -123,6 +123,14 @@ body {
 
 .status-unpaid{
     color: var(--red-color);
+    font-size: 0.8em;
+    font-weight: 800;
+}
+
+.status-paid-date{
+    color: var(--grey-color);
+    font-size: 0.8em;
+    font-weight: 800;
 }
 
 .form-info {
@@ -200,6 +208,11 @@ th {
     font-size: 0.7em;
     display: flex;
     padding-top: 5px;
+}
+
+.td-email a{
+    font-variant: normal;
+    color: var(--green-color);
 }
 
 .td-site {

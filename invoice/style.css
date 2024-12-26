@@ -6,7 +6,8 @@
     --grey-color: #333333;
 
     /*===== Font and typography =====*/
-    --body-font: 'Poppins', sans-serif;
+    /* --body-font: 'Poppins', sans-serif; */
+    font-family: "Roboto Condensed", sans-serif;
     --normal-font-size: 0.9rem;
 
     --line-height: 5px;
@@ -81,6 +82,10 @@ body {
     font-weight: 500;
 }
 
+.small-bx-icon {
+    font-size: 1.5rem !important;
+}
+
 .logo img {
     width: 52px;
 }
@@ -103,6 +108,12 @@ body {
     font-size: 0.68em;
 }
 
+.sub-logo-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .status-paids {
     /* border: 1px solid red; */
     display: flex;
@@ -121,8 +132,16 @@ body {
     font-weight: 800;
 }
 
-.status-unpaid{
+.status-unpaid {
     color: var(--red-color);
+    font-size: 0.8em;
+    font-weight: 800;
+}
+
+.status-paid-date {
+    color: var(--grey-color);
+    font-size: 0.8em;
+    font-weight: 800;
 }
 
 .form-info {
@@ -187,7 +206,7 @@ th {
 }
 
 .bx {
-    font-size: 1.5em !important;
+    font-size: 1.5em;
 }
 
 .td-number {
@@ -200,6 +219,11 @@ th {
     font-size: 0.7em;
     display: flex;
     padding-top: 5px;
+}
+
+.td-email a {
+    font-variant: normal;
+    color: var(--green-color);
 }
 
 .td-site {
@@ -227,80 +251,112 @@ th {
     padding-bottom: 5px;
 }
 
-.table-work td{
+.table-work td {
     font-size: 0.7em;
     padding: 10px;
 }
 
-.bg-th{
-    background-color: #ddd;}
-.bg-td{
-    background-color: #eee;}
-.bg-green{
-        background-color: #c6f8d1}
-.bg-yellow{
-    background-color: #fae6b9}
+.bg-th {
+    background-color: #ddd;
+}
+
+.bg-td {
+    background-color: #eee;
+}
+
+.bg-green {
+    background-color: #c6f8d1
+}
+
+.bg-yellow {
+    background-color: #fae6b9
+}
 
 
 
-.transfer>div:nth-child(1){
+.transfer>div:nth-child(1) {
     color: var(--green-color);
     font-style: italic;
-    font-size: 0.75em;
+    font-size: 0.65em;
     font-weight: 500;
 }
 
-.transfer>div:nth-child(2){
-    font-size: 0.75em;
+.transfer>div:nth-child(2) {
+    font-size: .65em;
     font-weight: 700;
+    font-family: "Roboto Condensed", sans-serif;
 }
 
-.transfer>div:nth-child(3){
-    font-size: 0.75em;
+.transfer>div:nth-child(3) {
+    font-size: .65em;
     color: var(--grey-color);
     font-weight: 500;
+    font-family: "Roboto Condensed", sans-serif;
 }
-.transfer>div:nth-child(3) span{
+
+.transfer>div:nth-child(3) span {
     color: var(--green-color);
+    font-family: "Roboto Condensed", sans-serif;
 }
-.transfer>div:nth-child(4){
-    font-size: 0.75em;
+
+.transfer>div:nth-child(4) {
+    font-size: 0.7em;
     color: var(--grey-color);
     font-weight: 500;
+    font-family: "Roboto Condensed", sans-serif;
 }
-.transfer>div:nth-child(4) span{
-    color: var(--green-color);
-}
-.transfer>div:nth-child(5){
-    font-size: 0.75em;
-    color: var(--grey-color);
-    font-weight: 500;
-}
-.transfer>div:nth-child(5) span{
+
+.transfer>div:nth-child(4) span {
     color: var(--green-color);
 }
 
-.signature{
+.transfer>div:nth-child(5) {
+    font-size: 0.65em;
+    color: var(--grey-color);
+    font-weight: 500;
+}
+
+.transfer>div:nth-child(5) span {
+    color: var(--green-color);
+}
+
+.signature {
     text-align: center;
 }
-.signature>div>img{
-width: 120px;
+
+/* QR */
+.signature>div>div>img {
+    width: 120px;
+    /* border: 1px solid red; */
 }
 
-.signature>div:nth-child(2){
+
+#qr_sign {}
+
+.qr-container {
+    margin-bottom: 10px;
+}
+
+/* NAME */
+.signature>div:nth-child(2) {
     font-size: 0.8em;
     font-weight: 800;
     margin-top: -10px;
 }
-.signature>div:nth-child(3){
+
+/* NOTE */
+.signature>div:nth-child(3) {
     margin-top: 5px;
     font-size: 0.7em;
     line-height: 1.2em;
 }
 
-.footer{
+
+
+
+.footer {
     display: flex;
     /* border: 1px solid red; */
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 }

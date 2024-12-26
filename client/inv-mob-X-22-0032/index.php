@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Invoice | INV.Mob/I/XXII/0012</title>
+    <title>Invoice | INV.Mob/X/22/0032</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,14 +42,20 @@
             <!-- INVOICE NUMBER -->
             <div class="inv-number">
                 <div>INVOICE</div>
-                <div>INV.Mob/I/XXII/0012</div>
+                <div>INV.Mob/X/22/0032</div>
             </div>
         </div>
 
         <!-- STATUS PAID -->
         <div class="status-paids">
             <div>Status :&nbsp;</div>
-            <div class="status-paid">PAID</div>
+            <div class="status-unpaid">UNPAID</div>
+        </div>
+        <!-- STATUS PAID DATE-->
+        <div class="status-paids">
+            <div>Paid Date :&nbsp;</div>
+            <!-- <div class="status-paid-date">17 Jul 2022</div> -->
+            <div class="status-paid-date">Waiting for payment</div>
         </div>
 
         <!-- FORM INFO -->
@@ -76,7 +82,7 @@
                         </div>
                         : &nbsp;
                         <div>
-                            22-Apr-2022
+                            29-Oct-2022
                         </div>
                     </td>
                 </tr>
@@ -87,7 +93,7 @@
                         </div>
                         : &nbsp;
                         <div>
-                            29-Apr-2022
+                            05-Nov-2022
                         </div>
                     </td>
                 </tr>
@@ -99,7 +105,7 @@
                         : &nbsp;
                         <div>
                             <b>
-                                2 (Dua) - 30%
+                                3 (Tiga [Final]) - 40%
                             </b>
                         </div>
                     </td>
@@ -158,7 +164,8 @@
                         </div>
                         <div class="td-email">
                             <i class='bx bxs-envelope'></i>
-                            &nbsp; lingga.pranasucitra@gmail.com
+                            &nbsp; <a
+                                href="mailto:lingga.pranasucitra@gmail.com?subject=Hello Lingga, about Invoice INV.Mob/VII/22/0012">lingga.pranasucitra@gmail.com</a>
                         </div>
                         <div class="td-site">
                             <i class='bx bx-link'></i>
@@ -200,12 +207,20 @@
                 <tr>
                     <td class="bg-td">
                         <b>1. Apps Development</b>
-                        <div>- UI/UX Update (Transition, Main Bar, Terms & Conditions, Privacy Policy)</div>
-                        <div>- Sign-In & Sign-Up System (Validation Input by Data Type, Input field minor update)</div>
-                        <div>- Get List & Detail Product, 3D Asset Bundle from Server</div>
-                        <div>- AR Features (Live Measurement, Scalling, Drag Transform, Up & Down Transform)</div>
-                        <div>- ID Validator Algorithm (KTP/Passport), Confirm Email Account (PHPMail API)</div>
-                        <div>- Minor revisions (MOM 5 April 2022)</div>
+
+                        <div>- Cart & Order System (Get databases)</div>
+                        <div>- Custom Order Feature</div>
+                        <div>- Payment Gateway System (Duitku API Integration)</div>
+                        <div>- Checkout with Duitku WebView System</div>
+                        <div>- Debug/Checking Payment with SSL/NonSSL Connections (For Security Purpose)</div>
+                        <div>- Order Details (Shipping Status, Filter Order by Status)</div>
+                        <div>- Added Materials Options On Detail Product (Max 3)</div>
+                        <div>- Confirm Shipping by QR Code Scanner</div>
+                        <div>- Some Minor Revision</div>
+                        <div>- Revisions (MOM 7 Agustus 2022)</div>
+                        <div>- Revisions (MOM 22 Oct 2022)</div>
+                        <div>- Android (.apk)/(.aab) Build for Release</div>
+                        <div>- iOS Test Flight & (.ipa) Build for Release</div>
                     </td>
 
                     <td style="text-align: center; vertical-align: top;" class="bg-td">
@@ -213,21 +228,26 @@
                     </td>
 
                     <td style="text-align: right;  vertical-align: top;" class="bg-td">
-                        Rp. 3,500,000
+                        Rp. 4,750,000
                     </td>
 
                     <td style="text-align: right;  vertical-align: top;" class="bg-td">
-                        Rp. 7,000,000
+                        Rp. 9,500,000
                     </td>
                 </tr>
                 <tr>
                     <td class="bg-td">
                         <b>2. Web Development</b>
-                        <div>- Administrator (Add, Update, Delete), Login System (Level : Admin & Master Admin)</div>
-                        <div>- Page Products (Add, Delete) - Update (OnProgress)</div>
-                        <div>- 3D Assetbundle Uploader</div>
-                        <div>- Page Customer (Add, Update, Delete), Account Verified Status</div>
-                        <div>- Minor revisions (MOM 5 April 2022)</div>
+                        <div>- Header (Notification System if new Order Arrived)</div>
+                        <div>- Purchase Order Detail (Shipping Status, Payment Gateway Detail, View Custom Order List)
+                        </div>
+                        <div>- QR Code Generator (Generate Shipping Label)</div>
+                        <div>- Change Databases System for Materials/Thumbnails Image</div>
+                        <div>- Change Databases System for Notification System</div>
+                        <div>- Added Materials Options (Upload 3 Options)</div>
+                        <div>- Minor revisions (MOM 22 Oct 2022)</div>
+                        <div>- Change Duitku API with Client Account</div>
+                        <div>- Change Site Server with Client Account</div>
                     </td>
 
                     <td style="text-align: center; vertical-align: top;" class="bg-td">
@@ -235,19 +255,41 @@
                     </td>
 
                     <td style="text-align: right;  vertical-align: top;" class="bg-td">
-                        Rp. 3,500,000
+                        Rp. 4,500,000
                     </td>
 
                     <td style="text-align: right;  vertical-align: top;" class="bg-td">
-                        Rp. 3,500,000
+                        Rp. 4,500,000
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-td">
+                        <b>3. Sisa Pembayaran Term 2</b>
+                        <div>- <a href="http://pranasucitra.com/client/inv-mob-I-XXII-0012" target="_blank">Invoice Term
+                                2
+                            </a></div>
+                    </td>
+
+                    <td style="text-align: center; vertical-align: top;" class="bg-td">
+                        -
+                    </td>
+
+                    <td style="text-align: right;  vertical-align: top;" class="bg-td">
+                        Rp. 500,000
+                    </td>
+
+                    <td style="text-align: right;  vertical-align: top;" class="bg-td">
+                        Rp. 500,000
                     </td>
                 </tr>
 
                 <tr>
-                    <td>Note : -</td>
+                    <td>Note : Boleh di Split jadi 2x pembayaran, sisanya setelah perubahan API Duitku & Pemindahan
+                        Server dengan Akun FURNIPEDIA
+                    </td>
                     <td></td>
                     <td style="text-align: right;">Subtotal</td>
-                    <td style="text-align: right;" class="bg-td">Rp. 10,500,000</td>
+                    <td style="text-align: right;" class="bg-td">Rp. 14,500,000</td>
                 </tr>
                 <tr>
                     <td></td>
@@ -259,21 +301,21 @@
                     <td></td>
                     <td></td>
                     <td style="text-align: right;">Billed Amount</td>
-                    <td style="text-align: right; font-size: 0.78em;" class="bg-th"><b>Rp. 10,500,000</b></td>
+                    <td style="text-align: right; font-size: 0.78em;" class="bg-th"><b>Rp. 14,500,000</b></td>
                 </tr>
 
                 <tr>
                     <td></td>
                     <td></td>
                     <td style="text-align: right;">Paid Off</td>
-                    <td style="text-align: right; font-size: 0.78em;" class="bg-green"><b>Rp. 10,000,000</b></td>
+                    <td style="text-align: right; font-size: 0.78em;" class="bg-green"><b>Rp. 0</b></td>
                 </tr>
 
                 <tr>
                     <td></td>
                     <td></td>
                     <td style="text-align: right;">Unpaid</td>
-                    <td style="text-align: right; font-size: 0.78em;" class="bg-yellow"><b>Rp. 500,000</b></td>
+                    <td style="text-align: right; font-size: 0.78em;" class="bg-yellow"><b>Rp. 14,500,000</b></td>
                 </tr>
 
 
@@ -285,15 +327,29 @@
 
         <div class="footer">
             <div class="transfer">
-                <div>Transfer to account :</div>
+                <div>Please select a transfer account for payment:<br><br></div>
                 <div>BANK BCA</div>
                 <div><span>a/n </span>LINGGA PRANASUCITRA Skom</div>
-                <div><span>No Rek : </span>3760656380</div>
+                <div><span>No Rek : </span><b>3 7 6 0 6 5 6 3 8 0</b></div>
                 <div><span>NPWP : </span>93.964.904.2-444-000.</div>
+            </div>
+            <div class="transfer">
+                <div><br><br></div>
+                <div>BANK MANDIRI (Livin' by Mandiri)</div>
+                <div><span>a/n </span>LINGGA PRANASUCITRA Skom</div>
+                <div><span>No Rek : </span><b>1 3 0 0 0 2 2 1 5 7 1 6 1</b></div>
+                <div><span></span></div>
+            </div>
+            <div class="transfer">
+                <div><br><br></div>
+                <div>BANK BTPN (Jenius / Visa)</div>
+                <div><span>a/n </span>LINGGA PRANASUCITRA</div>
+                <div><span>No Rek : </span><b>9 0 1 5 0 2 4 0 6 0 2</b></div>
+                <div><span>$Cashtag : </span>$pranasucitra</div>
             </div>
 
             <div class="signature">
-                <div><img src="qr_Images/april22nd2022.svg" alt=""></div>
+                <div><img src="qr_Images/oct29th2022.png" alt=""></div>
                 <div>LINGGA PRANASUCITRA</div>
                 <div>*This invoice is computer generated<br>
                     and no signature required.</div>

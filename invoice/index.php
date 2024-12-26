@@ -6,19 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Invoice | INV.Mob/I/XXII/0012</title>
+    <title>Invoice | INV.Mob/X/24/0201</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
-    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script> -->
+
 </head>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?<?php echo rand(00000, 99999); ?>">
 
 <body>
     <div id="wrapper">
@@ -34,15 +36,17 @@
             <div class="logo">
                 <img src="icon.svg" alt="">
                 <div class="logo-name">
-                    <div>PRANASUCITRA</div>
-                    <div>Mobile Apps Developer</div>
+                    <div class="sub-logo-name">
+                        <i class="bx bx-code-alt small-bx-icon"></i> PRANASUCITRA
+                    </div>
+                    <div>Full Stack Developer</div>
                 </div>
             </div>
 
             <!-- INVOICE NUMBER -->
             <div class="inv-number">
                 <div>INVOICE</div>
-                <div>INV.Mob/I/XXII/0012</div>
+                <div>INV.Mob/X/24/0201</div>
             </div>
         </div>
 
@@ -50,6 +54,12 @@
         <div class="status-paids">
             <div>Status :&nbsp;</div>
             <div class="status-paid">PAID</div>
+        </div>
+        <!-- STATUS PAID DATE-->
+        <div class="status-paids">
+            <div>Paid Date :&nbsp;</div>
+            <div class="status-paid-date">31 Oct 2024</div>
+            <!-- <div class="status-paid-date">Waiting for payment</div> -->
         </div>
 
         <!-- FORM INFO -->
@@ -65,29 +75,29 @@
                 <tr>
                     <td>
                         <div class="td-title-object">
-                            "Pembangunan Aplikasi Mobile AR & Web Portal (CMS) FURNIPEDIA"
+                            "Deploy Furnipedia Apps & Setup to Playstore"
                         </div>
                     </td>
                 </tr>
                 <tr>
                     <td class="td-fill tgl-invoice">
                         <div>
-                            Tgl. Invoice
+                            Invoice Date
                         </div>
                         : &nbsp;
                         <div>
-                            22-Apr-2022
+                            30 Oct 2024
                         </div>
                     </td>
                 </tr>
                 <tr>
                     <td class="td-fill tgl-invoice">
                         <div>
-                            Tgl. Jatuh Tempo
+                            Invoice Due Date
                         </div>
                         : &nbsp;
                         <div>
-                            29-Apr-2022
+                            06 Nov 2024
                         </div>
                     </td>
                 </tr>
@@ -99,7 +109,7 @@
                         : &nbsp;
                         <div>
                             <b>
-                                2 (Dua) - 30%
+                                1 (First [Final]) - 100%
                             </b>
                         </div>
                     </td>
@@ -107,12 +117,12 @@
                 <tr>
                     <td class="td-fill tgl-invoice">
                         <div>
-                            Dari Total Pembayaran
+                            From Total Payment
                         </div>
                         : &nbsp;
                         <div>
                             <b>
-                                Rp. 35,000,000
+                                Rp. 600.000
                             </b>
                         </div>
                     </td>
@@ -124,7 +134,7 @@
                         </div>
                         : &nbsp;
                         <div>
-                            *Selambat-lambatnya 7 hari kerja setelah invoice diterima.
+                            *No later than 7 working days after the invoice is received.
                         </div>
                     </td>
                 </tr>
@@ -158,27 +168,27 @@
                         </div>
                         <div class="td-email">
                             <i class='bx bxs-envelope'></i>
-                            &nbsp; lingga.pranasucitra@gmail.com
+                            &nbsp; <a href="mailto:lingga.pranasucitra@gmail.com?subject=Hello Lingga, about Invoice INV.Mob/X/24/0201">lingga.pranasucitra@gmail.com</a>
                         </div>
                         <div class="td-site">
                             <i class='bx bx-link'></i>
-                            &nbsp; <a href="https://pranasucitra.com" target="_blank">www.pranasucitra.com</a>
+                            &nbsp; <a href="https://pranasucitra.github.io" target="_blank">pranasucitra.github.io</a>
                         </div>
                     </td>
                     <td>
                         <div class="td-title">
-                            Alif Nurul Iman
+                            Abe
                         </div>
                         <div class="td-fill-address">
-                            Jln. Sekelimus Tengah No.36c, Bandung, Indonesia
+                            Portiara Cimanggis, Jakarta, Indonesia
                         </div>
                         <div class="td-number">
                             <i class='bx bx-mobile'></i>
-                            &nbsp; +62 877-2026-9363
+                            &nbsp; +62 813-1111-7511
                         </div>
                         <div class="td-email">
                             <i class='bx bxs-envelope'></i>
-                            &nbsp; alifnurulss@gmail.com
+                            &nbsp; abeberani17@gmail.com
                         </div>
                     </td>
                 </tr>
@@ -192,42 +202,18 @@
             <table class="table-work">
                 <tr>
                     <th class="bg-th">DESCRIPTION</th>
-                    <th class="bg-th" style="min-width: 40px;">QTY</th>
+                    <th class="bg-th" style="min-width: 40px;">QTY / PACKAGE</th>
                     <th class="bg-th" style="min-width: 130px;">PRICE</th>
                     <th class="bg-th" style="min-width: 130px;">AMOUNT</th>
                 </tr>
 
                 <tr>
                     <td class="bg-td">
-                        <b>1. Apps Development</b>
-                        <div>- UI/UX Update (Transition, Main Bar, Terms & Conditions, Privacy Policy)</div>
-                        <div>- Sign-In & Sign-Up System (Validation Input by Data Type, Input field minor update)</div>
-                        <div>- Get List & Detail Product, 3D Asset Bundle from Server</div>
-                        <div>- AR Features (Live Measurement, Scalling, Drag Transform, Up & Down Transform)</div>
-                        <div>- ID Validator Algorithm (KTP/Passport), Confirm Email Account (PHPMail API)</div>
-                        <div>- Minor revisions (MOM 5 April 2022)</div>
-                    </td>
+                        <b>1. Build Apps</b>
 
-                    <td style="text-align: center; vertical-align: top;" class="bg-td">
-                        2
-                    </td>
+                        <div>- Build Apps (.aab/.apk) target to API 34 (Android 14). </div>
+                        <div>- Patch some dependency Packages/Plugins. </div>
 
-                    <td style="text-align: right;  vertical-align: top;" class="bg-td">
-                        Rp. 3,500,000
-                    </td>
-
-                    <td style="text-align: right;  vertical-align: top;" class="bg-td">
-                        Rp. 7,000,000
-                    </td>
-                </tr>
-                <tr>
-                    <td class="bg-td">
-                        <b>2. Web Development</b>
-                        <div>- Administrator (Add, Update, Delete), Login System (Level : Admin & Master Admin)</div>
-                        <div>- Page Products (Add, Delete) - Update (OnProgress)</div>
-                        <div>- 3D Assetbundle Uploader</div>
-                        <div>- Page Customer (Add, Update, Delete), Account Verified Status</div>
-                        <div>- Minor revisions (MOM 5 April 2022)</div>
                     </td>
 
                     <td style="text-align: center; vertical-align: top;" class="bg-td">
@@ -235,45 +221,65 @@
                     </td>
 
                     <td style="text-align: right;  vertical-align: top;" class="bg-td">
-                        Rp. 3,500,000
+                        Rp. 350.000
                     </td>
 
                     <td style="text-align: right;  vertical-align: top;" class="bg-td">
-                        Rp. 3,500,000
+                        Rp. 350.000
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-td">
+                        <b>2. Upload & Setup to Playstore</b>
+                        <div>- Update application settings according to new policies on Google Play Store.</div>
+
+                    </td>
+
+                    <td style="text-align: center; vertical-align: top;" class="bg-td">
+                        1
+                    </td>
+
+                    <td style="text-align: right;  vertical-align: top;" class="bg-td">
+                        Rp. 250.000
+                    </td>
+
+                    <td style="text-align: right;  vertical-align: top;" class="bg-td">
+                        Rp. 250.000
                     </td>
                 </tr>
 
                 <tr>
-                    <td>Note : -</td>
+                    <td>Note : Will be processed after the invoice is paid.
+                    </td>
                     <td></td>
                     <td style="text-align: right;">Subtotal</td>
-                    <td style="text-align: right;" class="bg-td">Rp. 10,500,000</td>
+                    <td style="text-align: right;" class="bg-td">Rp. 600.000</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
                     <td style="text-align: right;">Tax</td>
-                    <td style="text-align: right;" class="bg-td"><i>Included (3%)</i></td>
+                    <td style="text-align: right;" class="bg-td">Rp. 0</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
                     <td style="text-align: right;">Billed Amount</td>
-                    <td style="text-align: right; font-size: 0.78em;" class="bg-th"><b>Rp. 10,500,000</b></td>
+                    <td style="text-align: right; font-size: 0.78em;" class="bg-th"><b>Rp. 600.000</b></td>
                 </tr>
 
                 <tr>
                     <td></td>
                     <td></td>
                     <td style="text-align: right;">Paid Off</td>
-                    <td style="text-align: right; font-size: 0.78em;" class="bg-green"><b>Rp. 10,000,000</b></td>
+                    <td style="text-align: right; font-size: 0.78em;" class="bg-green"><b>Rp. 600.000</b></td>
                 </tr>
 
                 <tr>
                     <td></td>
                     <td></td>
                     <td style="text-align: right;">Unpaid</td>
-                    <td style="text-align: right; font-size: 0.78em;" class="bg-yellow"><b>Rp. 500,000</b></td>
+                    <td style="text-align: right; font-size: 0.78em;" class="bg-yellow"><b>Rp. 0</b></td>
                 </tr>
 
 
@@ -285,15 +291,33 @@
 
         <div class="footer">
             <div class="transfer">
-                <div>Transfer to account :</div>
+                <div>Please select a transfer account for payment:<br><br></div>
                 <div>BANK BCA</div>
-                <div><span>a/n </span>LINGGA PRANASUCITRA Skom</div>
-                <div><span>No Rek : </span>3760656380</div>
-                <div><span>NPWP : </span>93.964.904.2-444-000.</div>
+                <div><span>Name : </span>LINGGA PRANASUCITRA Skom</div>
+                <div><span>Account Number : </span><b>3 7 6 0 6 5 6 3 8 0</b></div>
+                <!-- <div><span>NPWP : </span>93.964.904.2-444-000.</div> -->
+            </div>
+            <div class="transfer">
+                <div><br><br></div>
+                <div>BANK MANDIRI (Livin' by Mandiri)</div>
+                <div><span>Name : </span>LINGGA PRANASUCITRA Skom</div>
+                <div><span>Account Number : </span><b>1 3 0 0 0 2 2 1 5 7 1 6 1</b></div>
+                <div><span></span></div>
+            </div>
+            <div class="transfer">
+                <div><br><br></div>
+                <div>BANK BTPN (Jenius / Visa)</div>
+                <div><span>Name : </span>LINGGA PRANASUCITRA</div>
+                <div><span>Account Number : </span><b>9 0 1 5 0 2 4 0 6 0 2</b></div>
+                <!-- <div><span>$Cashtag : </span>$pranasucitra</div> -->
             </div>
 
             <div class="signature">
-                <div><img src="qr_Images/april22nd2022.svg" alt=""></div>
+                <!-- <div><img src="qr_Images/aug21st2024.png" alt=""></div> -->
+                <div class="qr-container">
+                    <div id="qr_sign"></div>
+                </div>
+
                 <div>LINGGA PRANASUCITRA</div>
                 <div>*This invoice is computer generated<br>
                     and no signature required.</div>
@@ -312,6 +336,29 @@
         <br>
 
     </div> <!-- wrapper -->
+
+
+    <script>
+    $(document).ready(function() {
+        const timeElapsed = Date.now();
+        const today = new Date(timeElapsed);
+
+        var _today = today.toDateString();
+        var sign_value = 'Digital signature, Signed by Lingga Pranasucitra on ' + _today + ', in Bandung, Indonesia. www.pranasucitra.github.io';
+
+        $.ajax({
+            url: 'generate-qr-sign.php',
+            data: {
+                _value: sign_value,
+            },
+            type: "GET",
+            dataType: "html",
+            success: function(data) {
+                document.getElementById('qr_sign').innerHTML = data;
+            }
+        });
+    });
+    </script>
 </body>
 
 </html>
