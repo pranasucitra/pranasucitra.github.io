@@ -1,6 +1,6 @@
 # Portfolio Website - Lingga Pranasucitra
 
-A professional portfolio website for a Senior Full Stack Developer built with pure HTML, CSS, and JavaScript + jQuery.
+A professional portfolio website for a Sr. Software Engineer | Full Stack Developer built with pure HTML, CSS, and JavaScript + jQuery.
 
 ## Features
 

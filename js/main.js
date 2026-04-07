@@ -24,11 +24,14 @@ $(document).ready(function() {
     // === ACTIVE NAV LINK ===
     initActiveNavLink();
     
+    // === PROJECTS SCROLL ===
+    initProjectsScroll();
+    
 });
 
 // === TYPING ANIMATION ===
 function initTypingAnimation() {
-    const text = "Senior Full Stack Developer";
+    const text = "Sr. Software Engineer | Full Stack Developer";
     const $typingText = $(".typing-text");
     let index = 0;
     
@@ -143,5 +146,34 @@ $.easing.easeInOutCubic = function(x, t, b, c, d) {
     return c / 2 * ((t -= 2) * t * t + 2) + b;
 };
 
-// === THEME TOGGLE ===
+// === PROJECTS SCROLL ===
+function initProjectsScroll() {
+    const $scrollContainer = $('#projectsScroll');
+    const $prevBtn = $('#projectsPrev');
+    const $nextBtn = $('#projectsNext');
+    const scrollAmount = 340;
+    
+    $nextBtn.on('click', function() {
+        $scrollContainer.animate({
+            scrollLeft: '+=' + scrollAmount
+        }, 400, 'easeInOutCubic');
+    });
+    
+    $prevBtn.on('click', function() {
+        $scrollContainer.animate({
+            scrollLeft: '-=' + scrollAmount
+        }, 400, 'easeInOutCubic');
+    });
+    
+    $scrollContainer.on('scroll', function() {
+        const maxScroll = this.scrollWidth - this.clientWidth;
+        const currentScroll = $(this).scrollLeft();
+        
+        $prevBtn.prop('disabled', currentScroll <= 0);
+        $nextBtn.prop('disabled', currentScroll >= maxScroll - 10);
+    });
+    
+    $scrollContainer.trigger('scroll');
+}
+
 // === END ===
