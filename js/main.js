@@ -106,6 +106,15 @@ function initScrollAnimations() {
         entries.forEach(function(entry) {
             if (entry.isIntersecting) {
                 $(entry.target).addClass("visible");
+                
+                // Animate timeline items in experience section
+                if (entry.target.id === 'experience') {
+                    $('.timeline-item').each(function(index) {
+                        setTimeout(() => {
+                            $(this).addClass('visible');
+                        }, index * 150);
+                    });
+                }
             }
         });
     }, observerOptions);

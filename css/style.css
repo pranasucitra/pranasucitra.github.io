@@ -1,37 +1,74 @@
-/* === CSS VARIABLES - SINGLE THEME === */
+/* ╔══════════════════════════════════════════════════════════════════════════╗
+   ║                    🎨 ACCENT COLOR SETTINGS                    ║
+   ║              Change these values to switch theme colors!           ║
+   ╚══════════════════════════════════════════════════════════════════════════╝ */
 :root {
-    /* === BACKGROUND LAYERS === */
-    --bg-darkest:   #031716;
-    --bg-dark:      #032F30;
-    --bg-card:      #274D60;
+    /* === CHOOSE YOUR ACCENT (uncomment/comment only the 2 lines below): === */
+    /* ─── TEAL (default): ─── */
+    --main-accent: #51A3AC;
+    --accent-light: #7DC4D4;
 
-    /* === ACCENT / BRAND COLORS === */
-    --accent-primary:   #0A7075;
-    --accent-secondary: #0C969C;
-    --accent-light:     #6BA3BE;
+    /* ─── ORANGE: ─── */
+    /* --main-accent: #ED7547; */
+    /* --accent-light: #F5A882; */
+
+    /* ─── BLUE: ─── */
+    /* --main-accent: #3498DB; */
+    /* --accent-light: #85C1E9; */
+
+    /* ─── PURPLE: ─── */
+    /* --main-accent: #9B59B6; */
+    /* --accent-light: #D2B4DE; */
+
+    /* ─── GREEN: ─── */
+    /* --main-accent: #27AE60; */
+    /* --accent-light: #82E0AA; */
+
+    /* ─── PINK: ─── */
+    /* --main-accent: #E91E63; */
+    /* --accent-light: #F48FB1; */
+
+    /* ─── BLACK-GRAY: ─── */
+    /* --main-accent: #4A4A4A; */
+    /* --accent-light: #8A8A8A; */
+}
+
+/* ╔══════════════════════════════════════════════════════════════════════════╗
+   ║              DO NOT EDIT BELOW THIS SECTION                    ║
+   ╚══════════════════════════════════════════════════════════════════════════╝ */
+:root {
+    /* === BACKGROUND LAYERS (New Theme) === */
+    --bg-darkest: #18191A;
+    --bg-dark: #23282F;
+    --bg-card: #23282F;
+
+    /* === ACCENT / BRAND COLORS (Auto-generated from main-accent) === */
+    --accent-primary: var(--main-accent);
+    --accent-secondary: color-mix(in srgb, var(--main-accent), #fff 20%);
+    --accent_light: color-mix(in srgb, var(--main-accent), #fff 40%);
 
     /* === TEXT COLORS === */
-    --text-primary:   #E8F4F4;
-    --text-secondary: #6BA3BE;
-    --text-muted:     #0C969C;
+    --text-primary: #F0F2F4;
+    --text-secondary: var(--accent_light);
+    --text-muted: var(--accent-secondary);
 
     /* === INTERACTIVE STATES === */
-    --btn-bg:         #0A7075;
-    --btn-hover:      #0C969C;
-    --btn-text:       #E8F4F4;
+    --btn-bg: var(--main-accent);
+    --btn-hover: var(--accent-secondary);
+    --btn-text: #E8F4F4;
 
     /* === BORDER & DIVIDER === */
-    --border:         #032F30;
-    --border-accent:  #0A7075;
+    --border: #032F30;
+    --border-accent: var(--main-accent);
 
-    /* === SHADOW === */
-    --shadow:         0 4px 24px rgba(10, 112, 117, 0.15);
-    --shadow-hover:   0 8px 32px rgba(12, 150, 156, 0.25);
+    /* === SHADOW (uses main-accent color - auto adjusts) === */
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    --shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.4);
 
     /* === GRADIENT === */
-    --gradient-hero: linear-gradient(135deg, #031716 0%, #032F30 50%, #274D60 100%);
-    --gradient-card: linear-gradient(145deg, #032F30, #274D60);
-    --gradient-accent: linear-gradient(90deg, #0A7075, #0C969C);
+    --gradient-hero: linear-gradient(135deg, #18191A 0%, #23282F 50%, #23282F 100%);
+    --gradient-card: linear-gradient(145deg, #23282F, #23282F);
+    --gradient-accent: linear-gradient(90deg, var(--main-accent), var(--accent-secondary));
 
     /* === ALIASES FOR CODE COMPATIBILITY === */
     --bg: var(--bg-darkest);
@@ -39,7 +76,7 @@
     --surface: var(--bg-dark);
     --text: var(--text-primary);
     --text-muted: var(--text-secondary);
-    --accent: var(--accent-primary);
+    --accent: var(--main-accent);
     --accent-hover: var(--accent-secondary);
     --white: var(--text-primary);
     --font-main: 'Poppins', 'Inter', sans-serif;
@@ -47,7 +84,9 @@
 }
 
 /* === RESET & BASE === */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -92,7 +131,7 @@ img {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(3, 47, 48, 0.95);
+    background: rgba(24, 25, 26, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 15px 0;
@@ -187,7 +226,7 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
+    background:
         radial-gradient(circle at 20% 80%, rgba(120, 184, 166, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(15, 52, 96, 0.3) 0%, transparent 50%);
     pointer-events: none;
@@ -231,8 +270,16 @@ img {
 }
 
 @keyframes blink {
-    0%, 50% { opacity: 1; }
-    51%, 100% { opacity: 0; }
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
 }
 
 .hero-tagline {
@@ -258,6 +305,7 @@ img {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -335,12 +383,19 @@ img {
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
         transform: translateX(-50%) translateY(0);
     }
+
     40% {
         transform: translateX(-50%) translateY(-10px);
     }
+
     60% {
         transform: translateX(-50%) translateY(-5px);
     }
@@ -351,9 +406,11 @@ img {
         opacity: 0;
         transform: rotate(45deg) translate(-5px, -5px);
     }
+
     50% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
         transform: rotate(45deg) translate(5px, 5px);
@@ -503,28 +560,71 @@ img {
 /* === EXPERIENCE SECTION === */
 #experience {
     background: var(--bg-darkest);
+    position: relative;
+    overflow: hidden;
+}
+
+#experience::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(10, 112, 117, 0.08) 0%, transparent 70%);
+    pointer-events: none;
 }
 
 .timeline {
     position: relative;
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
 .timeline::before {
     content: '';
     position: absolute;
-    left: 20px;
+    left: 21px;
     top: 0;
     bottom: 0;
     width: 2px;
-    background: linear-gradient(to bottom, var(--accent-primary), var(--accent-secondary));
+    background: linear-gradient(to bottom, var(--accent-primary) 0%, var(--accent-secondary) 50%, var(--accent-primary) 100%);
+    box-shadow: 0 0 15px rgba(10, 112, 117, 0.4);
 }
 
 .timeline-item {
     position: relative;
-    padding: 20px 0 20px 50px;
-    margin-bottom: 20px;
+    padding: 20px 0 20px 55px;
+    margin-bottom: 25px;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.timeline-item:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.timeline-item:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.timeline-item:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+.timeline-item:nth-child(5) {
+    transition-delay: 0.4s;
+}
+
+.timeline-item:nth-child(6) {
+    transition-delay: 0.5s;
 }
 
 .timeline-item:last-child {
@@ -533,15 +633,16 @@ img {
 
 .timeline-dot {
     position: absolute;
-    left: 12px;
-    top: 25px;
+    left: 13px;
+    top: 28px;
     width: 18px;
     height: 18px;
     background: var(--accent-secondary);
     border-radius: 50%;
     border: 3px solid var(--bg-darkest);
-    box-shadow: 0 0 0 3px var(--accent-primary);
+    box-shadow: 0 0 0 3px var(--accent-primary), 0 0 20px rgba(12, 150, 156, 0.5);
     z-index: 2;
+    transition: all 0.3s ease;
 }
 
 .timeline-dot::after {
@@ -554,13 +655,33 @@ img {
     height: 6px;
     background: var(--bg-darkest);
     border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0.5;
+    }
+}
+
+.timeline-item:hover .timeline-dot {
+    transform: scale(1.3);
+    box-shadow: 0 0 0 3px var(--accent-primary), 0 0 30px rgba(12, 150, 156, 0.8);
 }
 
 .timeline-content {
     background: var(--bg-card);
-    padding: 25px;
-    border-radius: 16px;
-    transition: var(--transition);
+    padding: 28px;
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     border: 1px solid var(--border);
     position: relative;
     overflow: hidden;
@@ -574,44 +695,56 @@ img {
     width: 4px;
     height: 100%;
     background: var(--gradient-accent);
+    transition: width 0.4s ease;
 }
 
 .timeline-content:hover {
-    transform: translateX(8px);
-    box-shadow: var(--shadow-hover);
-    border-color: var(--border-accent);
+    transform: translateX(12px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(10, 112, 117, 0.2);
+    border-color: var(--accent-primary);
+}
+
+.timeline-content:hover::before {
+    width: 100%;
+    opacity: 0.1;
 }
 
 .timeline-year {
     display: inline-block;
-    padding: 5px 14px;
-    background: var(--accent-primary);
+    padding: 6px 16px;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
     color: var(--text-primary);
-    border-radius: 20px;
+    border-radius: 25px;
     font-size: 0.8rem;
     font-weight: 600;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(10, 112, 117, 0.3);
 }
 
 .timeline-content h3 {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     font-weight: 600;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.timeline-content:hover h3 {
+    color: var(--accent-secondary);
 }
 
 .timeline-content h4 {
     font-size: 1rem;
     font-weight: 500;
     color: var(--accent-light);
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .timeline-content p {
     color: var(--text-secondary);
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 0.93rem;
+    line-height: 1.7;
 }
 
 /* === PROJECTS SECTION === */
@@ -1005,40 +1138,49 @@ footer p {
         grid-template-columns: 1fr;
         text-align: center;
     }
-    
+
     .about-image {
         justify-content: center;
         display: flex;
     }
-    
+
     .about-image img {
         margin: 0 auto;
     }
-    
+
     .about-image::before {
         display: none;
     }
-    
+
     .timeline::before {
         left: 20px;
     }
-    
+
     .timeline-item {
         width: 100%;
         padding-left: 50px;
         text-align: left;
         margin-left: 0;
     }
-    
+
     .timeline-item:nth-child(odd) {
         padding-right: 0;
         text-align: left;
     }
-    
+
     .timeline-item:nth-child(odd) .timeline-dot,
     .timeline-item:nth-child(even) .timeline-dot {
         left: 12px;
         right: auto;
+    }
+
+    .timeline-content:hover {
+        transform: translateX(6px) scale(1.01);
+    }
+
+    #experience::before {
+        width: 300px;
+        height: 300px;
     }
 }
 
@@ -1056,41 +1198,41 @@ footer p {
         gap: 25px;
         transition: var(--transition);
     }
-    
+
     .nav-menu.active {
         right: 0;
     }
-    
+
     .hamburger {
         display: flex;
         z-index: 1001;
     }
-    
+
     .hamburger.active span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
-    
+
     .hamburger.active span:nth-child(2) {
         opacity: 0;
     }
-    
+
     .hamburger.active span:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
     }
-    
+
     .skills-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .project-card {
         flex: 0 0 300px;
     }
-    
+
     .contact-cards {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .contact-card {
         width: 100%;
     }
@@ -1100,23 +1242,23 @@ footer p {
     .hero-name {
         font-size: 2rem;
     }
-    
+
     .hero-title {
         font-size: 1.1rem;
     }
-    
+
     .section {
         padding: 60px 0;
     }
-    
+
     .skill-card {
         padding: 20px;
     }
-    
+
     .project-card {
         flex: 0 0 280px;
     }
-    
+
     .timeline-content {
         padding: 20px;
     }
