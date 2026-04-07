@@ -460,7 +460,7 @@
         
         experiences.forEach(function(exp, index) {
             var item = document.createElement("div");
-            item.className = "timeline-item wow animate__fadeInLeft";
+            item.className = "timeline-item wow animate__fadeInUpBig";
             item.setAttribute("data-wow-delay", ((index + 1) * 0.1) + "s");
             
             var detailsHTML = exp.details.map(function(detail) {
