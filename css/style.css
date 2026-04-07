@@ -105,7 +105,9 @@ img {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(24, 25, 26, 0.95);
+    background: rgba(24, 25, 26, 0.30);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 15px 0;
