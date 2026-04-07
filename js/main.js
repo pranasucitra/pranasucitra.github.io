@@ -6,6 +6,17 @@
 // Wait for DOM and jQuery to be ready
 (function() {
     function init() {        
+        // === WOW.js ===
+        if (typeof WOW !== 'undefined') {
+            new WOW({
+                boxClass: 'wow',
+                animateClass: 'animate__animated',
+                offset: 100,
+                mobile: true,
+                live: true
+            }).init();
+        }
+        
         // === SMOOTH SCROLL ===
         initSmoothScroll();
         
@@ -286,7 +297,8 @@
         document.addEventListener("click", function(e) {
             if (e.target.classList.contains("timeline-toggle")) {
                 var timelineItem = e.target.closest(".timeline-item");
-                if (!timelineItem.classList.contains("visible")) return;
+                var isVisible = timelineItem.classList.contains("visible") || timelineItem.classList.contains("animated");
+                if (!isVisible) return;
                 
                 var isExpanded = timelineItem.classList.contains("expanded");
                 

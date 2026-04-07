@@ -3,8 +3,8 @@
    ╚══════════════════════════════════════════════════════════════════════════╝ */
 :root {
     /* Current accent color - change to: #ED7547 (orange), #3498DB (blue), etc */
-    --main-accent: #51A3AC;
-    --accent-light: #7DC4D4;
+    --main-accent: #39CC9B;
+    --accent-light: #f4b771;
 }
 
 /* ╔══════════════════════════════════════════════════════════════════════════╗
@@ -192,9 +192,18 @@ img {
     transform: translateX(-50%);
 }
 
-.hamburger span:nth-child(1) { top: 3px; }
-.hamburger span:nth-child(2) { top: 50%; transform: translate(-50%, -50%); }
-.hamburger span:nth-child(3) { bottom: 3px; }
+.hamburger span:nth-child(1) {
+    top: 3px;
+}
+
+.hamburger span:nth-child(2) {
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hamburger span:nth-child(3) {
+    bottom: 3px;
+}
 
 /* === HERO SECTION === */
 .hero {
@@ -242,7 +251,7 @@ img {
 .hero-title {
     font-size: clamp(1.2rem, 4vw, 1.8rem);
     font-weight: 500;
-    color: var(--accent);
+    color: var(--text-primary);
     margin-bottom: 15px;
     animation: fadeInUp 0.8s ease 0.2s forwards;
     opacity: 0;
@@ -623,14 +632,9 @@ img {
     position: relative;
     padding: 20px 0 20px 55px;
     margin-bottom: 25px;
-    opacity: 0;
-    transform: translateX(-30px);
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .timeline-item.visible {
-    opacity: 1;
-    transform: translateX(0);
     pointer-events: auto;
 }
 
@@ -856,8 +860,15 @@ img {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* === PROJECTS SECTION === */
