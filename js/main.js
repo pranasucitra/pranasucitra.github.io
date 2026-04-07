@@ -26,6 +26,9 @@
         
         // === PROJECTS FILTER ===
         initProjectsFilter();
+        
+        // === TIMELINE TOGGLE ===
+        initTimelineToggle();
     }
 
     // === TYPING ANIMATION ===
@@ -275,6 +278,31 @@
                     }
                 });
             });
+        });
+    }
+
+    // === TIMELINE TOGGLE ===
+    function initTimelineToggle() {
+        document.addEventListener("click", function(e) {
+            if (e.target.classList.contains("timeline-toggle")) {
+                var timelineItem = e.target.closest(".timeline-item");
+                if (!timelineItem.classList.contains("visible")) return;
+                
+                var isExpanded = timelineItem.classList.contains("expanded");
+                
+                document.querySelectorAll(".timeline-item.expanded").forEach(function(item) {
+                    item.classList.remove("expanded");
+                    item.querySelector(".timeline-toggle").textContent = "Show more";
+                });
+                
+                if (!isExpanded) {
+                    timelineItem.classList.add("expanded");
+                    e.target.textContent = "Show less";
+                } else {
+                    timelineItem.classList.remove("expanded");
+                    e.target.textContent = "Show more";
+                }
+            }
         });
     }
 

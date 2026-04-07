@@ -631,6 +631,7 @@ img {
 .timeline-item.visible {
     opacity: 1;
     transform: translateX(0);
+    pointer-events: auto;
 }
 
 .timeline-item:nth-child(2) {
@@ -711,6 +712,7 @@ img {
     border: 1px solid var(--border);
     position: relative;
     overflow: hidden;
+    z-index: 1;
 }
 
 .timeline-content::before {
@@ -771,6 +773,91 @@ img {
     color: var(--text-secondary);
     font-size: 0.93rem;
     line-height: 1.7;
+}
+
+.timeline-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.timeline-header h3 {
+    margin-bottom: 0;
+}
+
+.timeline-header i {
+    font-size: 1.2rem;
+    color: var(--accent-primary);
+    flex-shrink: 0;
+}
+
+.timeline-description {
+    margin-bottom: 12px;
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+}
+
+.timeline-toggle {
+    background: transparent;
+    border: 1px solid var(--accent-primary);
+    color: var(--accent-primary);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 10;
+}
+
+.timeline-toggle:hover {
+    background: var(--accent-primary);
+    color: var(--bg-darkest);
+}
+
+.timeline-details {
+    display: none;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+}
+
+.timeline-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-details li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.timeline-details li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent-primary);
+}
+
+.timeline-item.expanded .timeline-details {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.timeline-item.expanded .timeline-toggle {
+    background: var(--accent-primary);
+    color: var(--bg-darkest);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* === PROJECTS SECTION === */
