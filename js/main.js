@@ -50,6 +50,9 @@
         // === LOAD EXPERIENCE FROM JSON ===
         loadExperience();
         
+        // === GO TO TOP BUTTON ===
+        initGoToTop();
+        
         // === TIMELINE TOGGLE ===
         initTimelineToggle();
     }
@@ -587,6 +590,28 @@
                     e.target.textContent = "Show more";
                 }
             }
+        });
+    }
+
+    // === GO TO TOP BUTTON ===
+    function initGoToTop() {
+        var goToTopBtn = document.getElementById("goToTop");
+        
+        if (!goToTopBtn) return;
+        
+        window.addEventListener("scroll", function() {
+            if (window.scrollY > 100) {
+                goToTopBtn.classList.add("visible");
+            } else {
+                goToTopBtn.classList.remove("visible");
+            }
+        });
+        
+        goToTopBtn.addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         });
     }
 

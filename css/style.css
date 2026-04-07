@@ -1360,7 +1360,8 @@ footer p {
         right: -100%;
         width: 70%;
         height: 100vh;
-        background: var(--card);
+        background: var(--gradient-hero);
+    
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -1621,6 +1622,42 @@ footer p {
     .project-modal-title {
         font-size: 1.8rem;
     }
+}
+
+/* === GO TO TOP BUTTON === */
+.go-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--accent-primary);
+    color: var(--bg-darkest);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(81, 163, 172, 0.4);
+}
+
+.go-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.go-to-top:hover {
+    background: var(--accent-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(81, 163, 172, 0.6);
 }
 
 /* === END === */
