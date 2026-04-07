@@ -224,9 +224,12 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background:
+    /* background:
         radial-gradient(circle at 20% 80%, rgba(120, 184, 166, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(15, 52, 96, 0.3) 0%, transparent 50%);
+        radial-gradient(circle at 80% 20%, rgba(15, 52, 96, 0.3) 0%, transparent 50%); */
+    background:
+        radial-gradient(circle at 20% 80%, rgba(204, 172, 109, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(12, 122, 109, 0.3) 0%, transparent 50%);
     pointer-events: none;
 }
 

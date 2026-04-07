@@ -1,0 +1,44 @@
+{
+    "categories": [
+        {
+            "name": "Programming Languages",
+            "icon": "ri-code-line",
+            "skills": ["PHP", "C#", "JavaScript", "TypeScript", "Python", "SQL"]
+        },
+        {
+            "name": "Frontend",
+            "icon": "ri-layout-line",
+            "skills": ["React", "HTML5", "CSS3", "jQuery", "Bootstrap", "Tailwind"]
+        },
+        {
+            "name": "Backend",
+            "icon": "ri-server-line",
+            "skills": ["ASP.NET", "Node.js", "Laravel", "CodeIgniter", "REST API", "GraphQL"]
+        },
+        {
+            "name": "Database",
+            "icon": "ri-database-line",
+            "skills": ["MySQL", "MongoDB", "PostgreSQL", "SQL Server", "Redis"]
+        },
+        {
+            "name": "IoT & Hardware",
+            "icon": "ri-router-line",
+            "skills": ["Arduino", "ESP32", "Raspberry Pi", "Embedded Systems", "PCB Design"]
+        },
+        {
+            "name": "Tools & DevOps",
+            "icon": "ri-terminal-box-line",
+            "skills": ["Git", "Docker", "AWS", "CI/CD", "Linux", "Nginx"]
+        },
+        {
+            "name": "Mobile & Gaming",
+            "icon": "ri-gamepad-line",
+            "skills": ["Unity", "Android", "iOS", "C# Unity", "AR Development"]
+        },
+        {
+            "name": "Soft Skills",
+            "icon": "ri-team-line",
+            "skills": ["Team Leadership", "Project Management", "Problem Solving", "Communication"]
+        }
+    ]
+}

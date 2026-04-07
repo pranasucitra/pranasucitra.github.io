@@ -35,11 +35,17 @@
         // === PROJECTS SCROLL ===
         initProjectsScroll();
         
-        // === PROJECTS FILTER ===
-        initProjectsFilter();
+        // === LOAD PROJECTS FROM JSON ===
+        loadProjects().then(function() {
+            // === PROJECTS FILTER ===
+            initProjectsFilter();
+            
+            // === PROJECT MODAL ===
+            initProjectModal();
+        });
         
-        // === PROJECT MODAL ===
-        initProjectModal();
+        // === LOAD SKILLS FROM JSON ===
+        loadSkills();
         
         // === TIMELINE TOGGLE ===
         initTimelineToggle();
@@ -292,6 +298,127 @@
                     }
                 });
             });
+        });
+    }
+
+    // === LOAD PROJECTS FROM JSON ===
+    function loadProjects() {
+        return new Promise(function(resolve, reject) {
+            var container = document.getElementById("projectsScroll");
+            var jsonPath = container.getAttribute("data-json");
+            
+            if (!jsonPath) {
+                resolve();
+                return;
+            }
+            
+            fetch(jsonPath)
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(data) {
+                    renderProjects(data.projects);
+                    resolve();
+                })
+                .catch(function(error) {
+                    console.error("Error loading projects:", error);
+                    resolve();
+                });
+        });
+    }
+
+    function renderProjects(projects) {
+        var container = document.getElementById("projectsScroll");
+        container.innerHTML = "";
+        
+        projects.forEach(function(project, index) {
+            var card = document.createElement("div");
+            card.className = "project-card wow animate__fadeInUp";
+            card.setAttribute("data-wow-delay", (index * 0.1) + "s");
+            card.setAttribute("data-category", project.category);
+            card.setAttribute("data-title", project.title);
+            card.setAttribute("data-description", project.description);
+            card.setAttribute("data-image", project.image);
+            card.setAttribute("data-tags", project.tags.join(", "));
+            card.setAttribute("data-link", project.link || "");
+            
+            var tagsHTML = project.tags.map(function(tag) {
+                return '<span class="tag">' + tag + '</span>';
+            }).join("");
+            
+            var number = (index + 1).toString().padStart(2, "0");
+            
+            card.innerHTML = 
+                '<div class="project-image">' +
+                    '<img src="' + project.image + '" alt="' + project.title + '">' +
+                '</div>' +
+                '<span class="project-number">' + number + '</span>' +
+                '<div class="project-content">' +
+                    '<h3>' + project.title + '</h3>' +
+                    '<p>' + project.shortDescription + '</p>' +
+                    '<div class="project-tags">' + tagsHTML + '</div>' +
+                '</div>';
+            
+            container.appendChild(card);
+        });
+        
+        if (typeof WOW !== "undefined") {
+            new WOW({
+                boxClass: "wow",
+                animateClass: "animate__animated",
+                offset: 100,
+                mobile: true,
+                live: true
+            }).init();
+        }
+    }
+
+    // === LOAD SKILLS FROM JSON ===
+    function loadSkills() {
+        return new Promise(function(resolve, reject) {
+            var container = document.getElementById("skillsGrid");
+            var jsonPath = container.getAttribute("data-json");
+            
+            if (!jsonPath) {
+                resolve();
+                return;
+            }
+            
+            fetch(jsonPath)
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(data) {
+                    renderSkills(data.categories);
+                    resolve();
+                })
+                .catch(function(error) {
+                    console.error("Error loading skills:", error);
+                    resolve();
+                });
+        });
+    }
+
+    function renderSkills(categories) {
+        var container = document.getElementById("skillsGrid");
+        container.innerHTML = "";
+        
+        categories.forEach(function(category) {
+            var card = document.createElement("div");
+            card.className = "skill-card";
+            
+            var skillsHTML = category.skills.map(function(skill) {
+                return '<span class="tag">' + skill + '</span>';
+            }).join("");
+            
+            card.innerHTML = 
+                '<h3>' + 
+                    (category.icon ? '<i class="' + category.icon + '"></i> ' : '') + 
+                    category.name + 
+                '</h3>' +
+                '<div class="skill-tags">' + skillsHTML + '</div>';
+            
+            container.appendChild(card);
         });
     }
 

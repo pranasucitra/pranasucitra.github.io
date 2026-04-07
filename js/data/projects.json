@@ -1,0 +1,54 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "category": "iot",
+            "title": "GPS Tracking System",
+            "shortDescription": "Real-time vehicle tracking with Arduino integration, backend services, and web dashboard.",
+            "description": "Real-time vehicle tracking system with Arduino integration, backend services, and web dashboard. Features include live location monitoring, route history, geofencing alerts, and comprehensive reporting dashboard.",
+            "image": "assets/img/projects/project1.svg",
+            "tags": ["C#", "ASP.NET", "Arduino", "MySQL", "WebSocket"],
+            "link": "https://github.com/pranasucitra"
+        },
+        {
+            "id": 2,
+            "category": "web",
+            "title": "ERP System",
+            "shortDescription": "Web-based ERP for telecommunications company with business process and financial reporting.",
+            "description": "Web-based ERP system for telecommunications manufacturing company. Includes modules for inventory management, production planning, HR, finance, and comprehensive business intelligence reporting.",
+            "image": "assets/img/projects/project2.svg",
+            "tags": ["PHP", "MySQL", "JavaScript", "Bootstrap", "Web API"],
+            "link": "https://github.com/pranasucitra"
+        },
+        {
+            "id": 3,
+            "category": "arvr",
+            "title": "Educational Game",
+            "shortDescription": "Interactive educational game for children using Unity with engaging gameplay and AR features.",
+            "description": "Interactive educational game for children developed using Unity. Features engaging gameplay mechanics, AR integration for immersive learning experiences, and progress tracking for parents and educators.",
+            "image": "assets/img/projects/project3.svg",
+            "tags": ["Unity", "C#", "AR", "Android", "iOS"],
+            "link": "https://github.com/pranasucitra"
+        },
+        {
+            "id": 4,
+            "category": "pwa",
+            "title": "Asset Management PWA",
+            "shortDescription": "PWA-based attendance and asset management system for business operations.",
+            "description": "Progressive Web Application for attendance and asset management. Features offline capability, push notifications, barcode scanning, real-time sync, and comprehensive analytics dashboard.",
+            "image": "assets/img/projects/project1.svg",
+            "tags": ["React", "Node.js", "PWA", "MongoDB"],
+            "link": "https://github.com/pranasucitra"
+        },
+        {
+            "id": 5,
+            "category": "iot",
+            "title": "IoT Dashboard",
+            "shortDescription": "Real-time web dashboard for IoT devices with data visualization and analytics.",
+            "description": "Real-time web dashboard for IoT devices with comprehensive data visualization and analytics. Features live charts, device status monitoring, automated alerts, and RESTful API integration.",
+            "image": "assets/img/projects/project2.svg",
+            "tags": ["TypeScript", "WebSocket", "Docker", "React", "Node.js"],
+            "link": "https://github.com/pranasucitra"
+        }
+    ]
+}

@@ -91,78 +91,8 @@
     <section id="skills" class="section wow animate__fadeInUp" data-wow-offset="100">
         <div class="container">
             <h2 class="section-title">Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Programming Languages</h3>
-                    <div class="skill-tags">
-                        <span class="tag">C#</span>
-                        <span class="tag">C++</span>
-                        <span class="tag">PHP</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">TypeScript</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>Frontend</h3>
-                    <div class="skill-tags">
-                        <span class="tag">React</span>
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">Node.js</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>Backend</h3>
-                    <div class="skill-tags">
-                        <span class="tag">ASP.NET</span>
-                        <span class="tag">Web API</span>
-                        <span class="tag">REST API</span>
-                        <span class="tag">Laravel</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>Database</h3>
-                    <div class="skill-tags">
-                        <span class="tag">MySQL</span>
-                        <span class="tag">SQL</span>
-                        <span class="tag">Relational Database</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>Engineering</h3>
-                    <div class="skill-tags">
-                        <span class="tag">OOP</span>
-                        <span class="tag">Software Architecture</span>
-                        <span class="tag">Debugging</span>
-                        <span class="tag">API Integration</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>Practices & Tools</h3>
-                    <div class="skill-tags">
-                        <span class="tag">Git</span>
-                        <span class="tag">Docker</span>
-                        <span class="tag">DevOps</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>Specialized</h3>
-                    <div class="skill-tags">
-                        <span class="tag">Fleet Management</span>
-                        <span class="tag">Geofencing</span>
-                        <span class="tag">Arduino</span>
-                        <span class="tag">Unity 3D</span>
-                        <span class="tag">Augmented Reality</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>Strategy</h3>
-                    <div class="skill-tags">
-                        <span class="tag">Technology Strategy</span>
-                        <span class="tag">Software Architecture</span>
-                    </div>
-                </div>
-            </div>
+            <!-- Dynamic Skills Container -->
+            <div class="skills-grid" id="skillsGrid" data-json="js/data/skills.json"></div>
         </div>
     </section>
 
@@ -323,114 +253,10 @@
                         </svg>
                     </button>
                 </div>
-                <div class="projects-scroll" id="projectsScroll">
-                    <!-- IoT - GPS Tracking -->
-                    <div class="project-card wow animate__fadeInUp" data-wow-delay="0.1s" data-category="iot" 
-                         data-title="GPS Tracking System" 
-                         data-description="Real-time vehicle tracking system with Arduino integration, backend services, and web dashboard. Features include live location monitoring, route history, geofencing alerts, and comprehensive reporting dashboard."
-                         data-image="assets/img/projects/project1.svg"
-                         data-tags="C#, ASP.NET, Arduino, MySQL, WebSocket"
-                         data-link="https://github.com/pranasucitra">
-                        <div class="project-image">
-                            <img src="assets/img/projects/project1.svg" alt="GPS Tracking System">
-                        </div>
-                        <span class="project-number">01</span>
-                        <div class="project-content">
-                            <h3>GPS Tracking System</h3>
-                            <p>Real-time vehicle tracking with Arduino integration, backend services, and web dashboard.</p>
-                            <div class="project-tags">
-                                <span class="tag">C#</span>
-                                <span class="tag">ASP.NET</span>
-                                <span class="tag">Arduino</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Web - ERP System -->
-                    <div class="project-card wow animate__fadeInUp" data-wow-delay="0.2s" data-category="web" 
-                         data-title="ERP System" 
-                         data-description="Web-based ERP system for telecommunications manufacturing company. Includes modules for inventory management, production planning, HR, finance, and comprehensive business intelligence reporting."
-                         data-image="assets/img/projects/project2.svg"
-                         data-tags="PHP, MySQL, JavaScript, Bootstrap, Web API"
-                         data-link="https://github.com/pranasucitra">
-                        <div class="project-image">
-                            <img src="assets/img/projects/project2.svg" alt="ERP System">
-                        </div>
-                        <span class="project-number">02</span>
-                        <div class="project-content">
-                            <h3>ERP System</h3>
-                            <p>Web-based ERP for telecommunications company with business process and financial reporting.</p>
-                            <div class="project-tags">
-                                <span class="tag">PHP</span>
-                                <span class="tag">MySQL</span>
-                                <span class="tag">Web API</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Mobile/ARVR - Educational Game -->
-                    <div class="project-card wow animate__fadeInUp" data-wow-delay="0.3s" data-category="arvr" 
-                         data-title="Educational Game" 
-                         data-description="Interactive educational game for children developed using Unity. Features engaging gameplay mechanics, AR integration for immersive learning experiences, and progress tracking for parents and educators."
-                         data-image="assets/img/projects/project3.svg"
-                         data-tags="Unity, C#, AR, Android, iOS"
-                         data-link="https://github.com/pranasucitra">
-                        <div class="project-image">
-                            <img src="assets/img/projects/project3.svg" alt="Educational Game">
-                        </div>
-                        <span class="project-number">03</span>
-                        <div class="project-content">
-                            <h3>Educational Game</h3>
-                            <p>Interactive educational game for children using Unity with engaging gameplay and AR features.</p>
-                            <div class="project-tags">
-                                <span class="tag">Unity</span>
-                                <span class="tag">C#</span>
-                                <span class="tag">AR</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- PWA - Asset Management -->
-                    <div class="project-card wow animate__fadeInUp" data-wow-delay="0.4s" data-category="pwa" 
-                         data-title="Asset Management PWA" 
-                         data-description="Progressive Web Application for attendance and asset management. Features offline capability, push notifications, barcode scanning, real-time sync, and comprehensive analytics dashboard."
-                         data-image="assets/img/projects/project1.svg"
-                         data-tags="React, Node.js, PWA, MongoDB, PWA"
-                         data-link="https://github.com/pranasucitra">
-                        <div class="project-image">
-                            <img src="assets/img/projects/project1.svg" alt="Asset Management">
-                        </div>
-                        <span class="project-number">04</span>
-                        <div class="project-content">
-                            <h3>Asset Management</h3>
-                            <p>PWA-based attendance and asset management system for business operations.</p>
-                            <div class="project-tags">
-                                <span class="tag">React</span>
-                                <span class="tag">Node.js</span>
-                                <span class="tag">PWA</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- IoT - Dashboard -->
-                    <div class="project-card wow animate__fadeInUp" data-wow-delay="0.5s" data-category="iot" 
-                         data-title="IoT Dashboard" 
-                         data-description="Real-time web dashboard for IoT devices with comprehensive data visualization and analytics. Features live charts, device status monitoring, automated alerts, and RESTful API integration."
-                         data-image="assets/img/projects/project2.svg"
-                         data-tags="TypeScript, WebSocket, Docker, React, Node.js"
-                         data-link="https://github.com/pranasucitra">
-                        <div class="project-image">
-                            <img src="assets/img/projects/project2.svg" alt="IoT Dashboard">
-                        </div>
-                        <span class="project-number">05</span>
-                        <div class="project-content">
-                            <h3>IoT Dashboard</h3>
-                            <p>Real-time web dashboard for IoT devices with data visualization and analytics.</p>
-                            <div class="project-tags">
-                                <span class="tag">TypeScript</span>
-                                <span class="tag">WebSocket</span>
-                                <span class="tag">Docker</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
+            <!-- Dynamic Projects Container -->
+            <div class="projects-scroll" id="projectsScroll" data-json="js/data/projects.json"></div>
+            
         </div>
     </section>
 
