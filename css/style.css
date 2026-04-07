@@ -1,36 +1,10 @@
 /* ╔══════════════════════════════════════════════════════════════════════════╗
-   ║                    🎨 ACCENT COLOR SETTINGS                    ║
-   ║              Change these values to switch theme colors!           ║
+   ║                    🎨 ACCENT COLOR (Change this to switch theme)       ║
    ╚══════════════════════════════════════════════════════════════════════════╝ */
 :root {
-    /* === CHOOSE YOUR ACCENT (uncomment/comment only the 2 lines below): === */
-    /* ─── TEAL (default): ─── */
+    /* Current accent color - change to: #ED7547 (orange), #3498DB (blue), etc */
     --main-accent: #51A3AC;
     --accent-light: #7DC4D4;
-
-    /* ─── ORANGE: ─── */
-    /* --main-accent: #ED7547; */
-    /* --accent-light: #F5A882; */
-
-    /* ─── BLUE: ─── */
-    /* --main-accent: #3498DB; */
-    /* --accent-light: #85C1E9; */
-
-    /* ─── PURPLE: ─── */
-    /* --main-accent: #9B59B6; */
-    /* --accent-light: #D2B4DE; */
-
-    /* ─── GREEN: ─── */
-    /* --main-accent: #27AE60; */
-    /* --accent-light: #82E0AA; */
-
-    /* ─── PINK: ─── */
-    /* --main-accent: #E91E63; */
-    /* --accent-light: #F48FB1; */
-
-    /* ─── BLACK-GRAY: ─── */
-    /* --main-accent: #4A4A4A; */
-    /* --accent-light: #8A8A8A; */
 }
 
 /* ╔══════════════════════════════════════════════════════════════════════════╗
@@ -504,57 +478,93 @@ img {
 /* === SKILLS SECTION === */
 #skills {
     background: var(--bg-card);
+    padding: 80px 0;
 }
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
 }
 
 .skill-card {
-    background: var(--bg-dark);
-    padding: 30px;
-    border-radius: 16px;
-    transition: var(--transition);
+    background: var(--bg-darkest);
+    padding: 20px 22px;
+    border-radius: 14px;
+    transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
     border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--accent-primary);
+    transform: scaleY(0);
+    transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+    transform-origin: bottom;
 }
 
 .skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
-    border-color: var(--accent-primary);
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+    border-color: transparent;
+}
+
+.skill-card:hover::before {
+    transform: scaleY(1);
+    transform-origin: top;
 }
 
 .skill-card h3 {
-    font-size: 1.2rem;
+    font-size: 0.95rem;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
     color: var(--accent-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.skill-card h3::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--border), transparent);
+    opacity: 0.5;
 }
 
 .skill-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 6px;
 }
 
 .tag {
     display: inline-block;
-    padding: 6px 14px;
-    background: var(--bg-card);
+    padding: 5px 11px;
+    background: transparent;
     color: var(--text-primary);
-    border-radius: 20px;
-    font-size: 0.85rem;
+    border-radius: 6px;
+    font-size: 0.78rem;
     font-weight: 500;
-    transition: var(--transition);
-    border: 1px solid var(--border);
+    transition: all 0.25s ease;
+    border: 1px solid transparent;
+    letter-spacing: 0.3px;
 }
 
 .tag:hover {
-    border-color: var(--accent-primary);
-    color: var(--accent-secondary);
-    background: var(--accent-primary);
+    background: var(--main-accent);
+    color: var(--bg-darkest);
+    border-color: var(--main-accent);
+    transform: scale(1.08);
 }
 
 /* === EXPERIENCE SECTION === */
