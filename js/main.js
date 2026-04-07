@@ -53,6 +53,9 @@
         // === GO TO TOP BUTTON ===
         initGoToTop();
         
+        // === NAME REVEAL ANIMATION ===
+        initNameReveal();
+        
         // === TIMELINE TOGGLE ===
         initTimelineToggle();
     }
@@ -83,6 +86,56 @@
             type();
             if (cursor) cursor.style.opacity = "1";
         }, 600);
+    }
+
+    // === NAME REVEAL ANIMATION ===
+    function initNameReveal() {
+        var nameWrapper = document.querySelector(".name-wrapper");
+        if (!nameWrapper) return;
+        
+        var name = nameWrapper.getAttribute("data-name");
+        var timer = 30;
+        var letters = name.split("");
+        
+        nameWrapper.innerHTML = "";
+        
+        letters.forEach(function(char) {
+            var span = document.createElement("span");
+            if (char === " ") {
+                span.className = "space";
+                span.textContent = " ";
+            } else {
+                span.className = "nbr ltr";
+                span.setAttribute("data-letter", char);
+                span.textContent = Math.floor(Math.random() * 10);
+            }
+            nameWrapper.appendChild(span);
+        });
+        
+        var nbrs = document.querySelectorAll(".nbr");
+        var change = 0;
+        var data = 0;
+        var interval = setInterval(function() {
+            var randomNbr = Math.floor(Math.random() * nbrs.length);
+            var el = nbrs[randomNbr];
+            
+            if (!el.classList.contains("revealed")) {
+                el.textContent = Math.floor(Math.random() * 10);
+                change++;
+                
+                if (change > 15) {
+                    var char = el.getAttribute("data-letter");
+                    el.textContent = char;
+                    el.classList.remove("nbr");
+                    el.classList.add("revealed");
+                    data++;
+                    
+                    if (data === letters.length) {
+                        clearInterval(interval);
+                    }
+                }
+            }
+        }, timer);
     }
 
     // === SMOOTH SCROLL ===

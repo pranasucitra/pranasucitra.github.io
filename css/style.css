@@ -224,9 +224,11 @@ img {
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
@@ -248,9 +250,12 @@ img {
 }
 
 @keyframes glowPulse {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.5;
     }
+
     50% {
         opacity: 1;
     }
@@ -264,13 +269,45 @@ img {
 
 .hero-name {
     font-family: 'Megrim', cursive;
-    font-size: clamp(3rem, 10vw, 6rem);
+    font-size: clamp(2.5rem, 8vw, 5rem);
     font-weight: 400;
     margin-bottom: 10px;
     color: var(--accent-primary);
     text-shadow: 0 0 40px rgba(81, 163, 172, 0.5);
     animation: fadeInUp 0.8s ease forwards;
     opacity: 0;
+}
+
+.hero-name .name-wrapper {
+    display: inline-flex;
+}
+
+.hero-name .nbr,
+.hero-name .space,
+.hero-name .revealed {
+    display: inline-block;
+    width: 0.6em;
+    text-align: center;
+    /* font-family: 'Afacad Flux', sans-serif; */
+    font-family: 'Megrim', cursive;
+    font-weight: 700;
+    color: var(--accent-primary);
+}
+
+.hero-name .revealed {
+    animation: letterReveal 0.3s ease forwards;
+}
+
+@keyframes letterReveal {
+    0% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .hero-title {
@@ -1382,7 +1419,7 @@ footer p {
         width: 70%;
         height: 100vh;
         background: var(--gradient-hero);
-    
+
         flex-direction: column;
         justify-content: center;
         align-items: center;
