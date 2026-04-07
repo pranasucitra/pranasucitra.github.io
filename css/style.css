@@ -1250,6 +1250,7 @@ img {
     align-items: center;
     justify-content: center;
     transition: var(--transition);
+    line-height: 1;
 }
 
 .contact-card:hover .contact-card-icon {
@@ -1257,10 +1258,16 @@ img {
     transform: scale(1.1);
 }
 
-.contact-card-icon svg {
-    width: 28px;
-    height: 28px;
+.contact-card-icon svg,
+.contact-card-icon i {
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
     color: var(--text-primary);
+    flex-shrink: 0;
+    line-height: 40px;
+    text-align: center;
 }
 
 .contact-card-label {
