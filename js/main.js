@@ -39,11 +39,11 @@ function initTypingAnimation() {
         if (index < text.length) {
             $typingText.append(text.charAt(index));
             index++;
-            setTimeout(type, 100);
+            setTimeout(type, 80);
         }
     }
     
-    setTimeout(type, 1000);
+    setTimeout(type, 600);
 }
 
 // === SMOOTH SCROLL ===
