@@ -33,17 +33,21 @@ $(document).ready(function() {
 function initTypingAnimation() {
     const text = "Sr. Software Engineer | Full Stack Developer";
     const $typingText = $(".typing-text");
+    const $cursor = $(".cursor");
     let index = 0;
     
     function type() {
         if (index < text.length) {
-            $typingText.append(text.charAt(index));
+            $typingText.text($typingText.text() + text.charAt(index));
             index++;
             setTimeout(type, 80);
         }
     }
     
-    setTimeout(type, 600);
+    setTimeout(function() {
+        type();
+        $cursor.css("opacity", "1");
+    }, 600);
 }
 
 // === SMOOTH SCROLL ===

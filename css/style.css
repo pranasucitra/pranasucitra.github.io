@@ -172,6 +172,8 @@ img {
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+    position: relative;
+    z-index: 1001;
 }
 
 .hamburger span {
@@ -421,15 +423,12 @@ img {
 .section {
     opacity: 1;
     transform: translateY(0);
-}
-
-.section.fade-in {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.section.fade-in.visible {
+.section.visible {
     opacity: 1;
     transform: translateY(0);
 }
@@ -1217,6 +1216,7 @@ footer p {
         align-items: center;
         gap: 25px;
         transition: var(--transition);
+        z-index: 1000;
     }
 
     .nav-menu.active {
