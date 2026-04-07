@@ -923,7 +923,7 @@ img {
     gap: 28px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    padding: 15px 10px 40px;
+    padding: 25px 10px 40px;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     -ms-overflow-style: none;
