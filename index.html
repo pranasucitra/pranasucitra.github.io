@@ -230,6 +230,15 @@
     <section id="projects" class="section">
         <div class="container">
             <h2 class="section-title">Projects</h2>
+            
+            <!-- Project Category Tabs -->
+            <div class="project-tabs">
+                <button class="project-tab active" data-category="all">All</button>
+                <button class="project-tab" data-category="web">Web</button>
+                <button class="project-tab" data-category="mobile">Mobile</button>
+                <button class="project-tab" data-category="desktop">Desktop</button>
+            </div>
+            
             <div class="projects-scroll-container">
                 <div class="projects-nav">
                     <button class="projects-nav-btn" id="projectsPrev" aria-label="Previous projects">
@@ -244,7 +253,8 @@
                     </button>
                 </div>
                 <div class="projects-scroll" id="projectsScroll">
-                    <div class="project-card">
+                    <!-- Web - Ecommerce -->
+                    <div class="project-card" data-category="web" data-type="ecommerce">
                         <div class="project-image">
                             <img src="assets/img/projects/project1.svg" alt="Project 1">
                             <div class="project-overlay">
@@ -266,7 +276,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="project-card">
+                    <!-- Web - Business -->
+                    <div class="project-card" data-category="web" data-type="business">
                         <div class="project-image">
                             <img src="assets/img/projects/project2.svg" alt="Project 2">
                             <div class="project-overlay">
@@ -288,7 +299,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="project-card">
+                    <!-- Mobile - Game -->
+                    <div class="project-card" data-category="mobile" data-type="game">
                         <div class="project-image">
                             <img src="assets/img/projects/project3.svg" alt="Project 3">
                             <div class="project-overlay">
@@ -310,7 +322,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="project-card">
+                    <!-- Desktop - Business -->
+                    <div class="project-card" data-category="desktop" data-type="business">
                         <div class="project-image">
                             <img src="assets/img/projects/project1.svg" alt="Project 4">
                             <div class="project-overlay">
@@ -332,7 +345,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="project-card">
+                    <!-- Web - IoT -->
+                    <div class="project-card" data-category="web" data-type="iot">
                         <div class="project-image">
                             <img src="assets/img/projects/project2.svg" alt="Project 5">
                             <div class="project-overlay">

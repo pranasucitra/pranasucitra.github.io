@@ -788,6 +788,38 @@ img {
     position: relative;
 }
 
+/* === PROJECT TABS === */
+.project-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.project-tab {
+    padding: 10px 24px;
+    border-radius: 25px;
+    background: var(--bg-dark);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.project-tab:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+.project-tab.active {
+    background: var(--accent-primary);
+    color: var(--bg-darkest);
+    border-color: var(--accent-primary);
+}
+
 .projects-scroll {
     display: flex;
     gap: 28px;
@@ -851,6 +883,8 @@ img {
     scroll-snap-align: start;
     border: 1px solid var(--border);
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {

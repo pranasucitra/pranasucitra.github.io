@@ -23,6 +23,9 @@
         
         // === PROJECTS SCROLL ===
         initProjectsScroll();
+        
+        // === PROJECTS FILTER ===
+        initProjectsFilter();
     }
 
     // === TYPING ANIMATION ===
@@ -236,6 +239,43 @@
         });
         
         scrollContainer.dispatchEvent(new Event("scroll"));
+    }
+
+    // === PROJECTS FILTER ===
+    function initProjectsFilter() {
+        var tabs = document.querySelectorAll(".project-tab");
+        var cards = document.querySelectorAll(".project-card");
+        
+        if (!tabs.length || !cards.length) return;
+        
+        tabs.forEach(function(tab) {
+            tab.addEventListener("click", function() {
+                var category = this.getAttribute("data-category");
+                
+                tabs.forEach(function(t) {
+                    t.classList.remove("active");
+                });
+                this.classList.add("active");
+                
+                cards.forEach(function(card) {
+                    var cardCategory = card.getAttribute("data-category");
+                    
+                    if (category === "all" || cardCategory === category) {
+                        card.style.display = "flex";
+                        setTimeout(function() {
+                            card.style.opacity = "1";
+                            card.style.transform = "scale(1)";
+                        }, 10);
+                    } else {
+                        card.style.opacity = "0";
+                        card.style.transform = "scale(0.8)";
+                        setTimeout(function() {
+                            card.style.display = "none";
+                        }, 300);
+                    }
+                });
+            });
+        });
     }
 
     // Initialize when DOM is ready
