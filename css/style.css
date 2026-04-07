@@ -43,6 +43,7 @@
     --gradient-hero: linear-gradient(135deg, #18191A 0%, #23282F 50%, #23282F 100%);
     --gradient-card: linear-gradient(145deg, #23282F, #23282F);
     --gradient-accent: linear-gradient(90deg, var(--main-accent), var(--accent-secondary));
+    --gradient-accent-transparent: linear-gradient(90deg, var(--main-accent) 0%, transparent 100%);
 
     /* === ALIASES FOR CODE COMPATIBILITY === */
     --bg: var(--bg-darkest);
@@ -497,6 +498,7 @@ img {
     color: var(--text-secondary);
     margin-bottom: 20px;
     font-size: 1.05rem;
+    text-align: justify;
 }
 
 .about-text .btn {
@@ -729,7 +731,7 @@ img {
     left: 0;
     width: 4px;
     height: 100%;
-    background: var(--gradient-accent);
+    background: var(--gradient-accent-transparent);
     transition: width 0.4s ease;
 }
 
@@ -1535,6 +1537,7 @@ footer p {
     color: var(--text-secondary);
     line-height: 1.7;
     margin-bottom: 20px;
+    text-align: justify;
 }
 
 .project-modal-tags {
@@ -1580,29 +1583,41 @@ footer p {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes slideUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (min-width: 768px) {
     .project-modal-body {
         grid-template-columns: 1.2fr 1fr;
     }
-    
+
     .project-modal-image {
         height: 100%;
         min-height: 350px;
     }
-    
+
     .project-modal-info {
         padding: 40px;
     }
-    
+
     .project-modal-title {
         font-size: 1.8rem;
     }
