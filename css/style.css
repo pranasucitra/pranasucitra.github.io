@@ -331,7 +331,7 @@ img {
 .cursor {
     display: inline-block;
     animation: blink 1s infinite;
-    color: var(--accent-secondary);
+    color: var(--accent-light);
     opacity: 0;
 }
 
