@@ -54,7 +54,7 @@
     --accent: var(--main-accent);
     --accent-hover: var(--accent-secondary);
     --white: var(--text-primary);
-    --font-main: 'Poppins', 'Inter', sans-serif;
+    --font-main: 'Poppins', sans-serif;
     --transition: all 0.3s ease;
 }
 
@@ -263,13 +263,12 @@ img {
 }
 
 .hero-name {
-    font-size: clamp(2.5rem, 8vw, 4.5rem);
-    font-weight: 700;
+    font-family: 'Megrim', cursive;
+    font-size: clamp(3rem, 10vw, 6rem);
+    font-weight: 400;
     margin-bottom: 10px;
-    background: var(--gradient-accent);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--accent-primary);
+    text-shadow: 0 0 40px rgba(81, 163, 172, 0.5);
     animation: fadeInUp 0.8s ease forwards;
     opacity: 0;
 }
