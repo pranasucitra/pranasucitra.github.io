@@ -38,6 +38,9 @@
         // === PROJECTS FILTER ===
         initProjectsFilter();
         
+        // === PROJECT MODAL ===
+        initProjectModal();
+        
         // === TIMELINE TOGGLE ===
         initTimelineToggle();
     }
@@ -289,6 +292,76 @@
                     }
                 });
             });
+        });
+    }
+
+    // === PROJECT MODAL ===
+    function initProjectModal() {
+        var modal = document.getElementById("projectModal");
+        if (!modal) return;
+        
+        var closeBtn = modal.querySelector(".project-modal-close");
+        var cards = document.querySelectorAll(".project-card");
+        
+        cards.forEach(function(card) {
+            card.style.cursor = "pointer";
+            card.addEventListener("click", function() {
+                var title = card.getAttribute("data-title") || card.querySelector("h3").textContent;
+                var description = card.getAttribute("data-description") || card.querySelector("p").textContent;
+                var image = card.getAttribute("data-image") || card.querySelector("img").src;
+                var tags = card.getAttribute("data-tags") || "";
+                var link = card.getAttribute("data-link") || "";
+                var category = card.getAttribute("data-category") || "";
+                
+                modal.querySelector(".project-modal-title").textContent = title;
+                modal.querySelector(".project-modal-description").textContent = description;
+                modal.querySelector(".project-modal-image img").src = image;
+                modal.querySelector(".project-modal-category").textContent = category.toUpperCase();
+                
+                var tagsContainer = modal.querySelector(".project-modal-tags");
+                tagsContainer.innerHTML = "";
+                if (tags) {
+                    tags.split(",").forEach(function(tag) {
+                        var span = document.createElement("span");
+                        span.className = "tag";
+                        span.textContent = tag.trim();
+                        tagsContainer.appendChild(span);
+                    });
+                }
+                
+                var linksContainer = modal.querySelector(".project-modal-links");
+                linksContainer.innerHTML = "";
+                if (link) {
+                    var btn = document.createElement("a");
+                    btn.href = link;
+                    btn.className = "btn btn-primary";
+                    btn.target = "_blank";
+                    btn.innerHTML = '<i class="ri-external-link-line"></i> View Project';
+                    linksContainer.appendChild(btn);
+                }
+                
+                modal.classList.add("active");
+                document.body.style.overflow = "hidden";
+            });
+        });
+        
+        closeBtn.addEventListener("click", function() {
+            modal.classList.remove("active");
+            document.body.style.overflow = "";
+        });
+        
+        modal.addEventListener("click", function(e) {
+            if (e.target === modal) {
+                modal.classList.remove("active");
+                document.body.style.overflow = "";
+            }
+        });
+        
+        document.addEventListener("keydown", function(e) {
+            if (e.key === "Escape" && modal.classList.contains("active")) {
+                modal.classList.remove("active");
+                document.body.style.overflow = "";
+            }
         });
     }
 
