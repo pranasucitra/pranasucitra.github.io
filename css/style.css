@@ -54,7 +54,7 @@
     --accent: var(--main-accent);
     --accent-hover: var(--accent-secondary);
     --white: var(--text-primary);
-    --font-main: 'Poppins', sans-serif;
+    --font-main: 'Afacad Flux', sans-serif;
     --transition: all 0.3s ease;
 }
 
@@ -143,7 +143,7 @@ img {
 }
 
 .nav-menu a {
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: 500;
     color: var(--text);
     transition: var(--transition);
