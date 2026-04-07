@@ -213,8 +213,15 @@
             var heroContent = firstSection.querySelector(".hero-content");
             if (heroContent) heroContent.classList.add("visible");
             
-            // Trigger typing animation after hero is visible
-            setTimeout(initTypingAnimation, 300);
+            // Make hero name visible
+            var heroName = firstSection.querySelector(".hero-name");
+            if (heroName) heroName.classList.add("visible");
+            
+            // Trigger name reveal and typing animation after hero is visible
+            setTimeout(function() {
+                initNameReveal();
+                initTypingAnimation();
+            }, 300);
         }
         
         var observerOptions = {

@@ -269,28 +269,33 @@ img {
 
 .hero-name {
     font-family: 'Megrim', cursive;
-    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-size: clamp(2.6rem, 8vw, 5rem);
     font-weight: 400;
     margin-bottom: 10px;
     color: var(--accent-primary);
     text-shadow: 0 0 40px rgba(81, 163, 172, 0.5);
     animation: fadeInUp 0.8s ease forwards;
     opacity: 0;
+    display: block;
+    width: 100%;
+}
+
+.hero-name.visible {
+    opacity: 1;
 }
 
 .hero-name .name-wrapper {
-    display: inline-flex;
+    display: inline;
 }
 
 .hero-name .nbr,
 .hero-name .space,
 .hero-name .revealed {
-    display: inline-block;
-    width: 0.6em;
-    text-align: center;
-    /* font-family: 'Afacad Flux', sans-serif; */
+    display: inline;
+    width: auto;
+    text-align: left;
     font-family: 'Megrim', cursive;
-    font-weight: 700;
+    font-weight: 400;
     color: var(--accent-primary);
 }
 
