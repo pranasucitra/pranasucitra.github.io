@@ -47,6 +47,9 @@
         // === LOAD SKILLS FROM JSON ===
         loadSkills();
         
+        // === LOAD EXPERIENCE FROM JSON ===
+        loadExperience();
+        
         // === TIMELINE TOGGLE ===
         initTimelineToggle();
     }
@@ -420,6 +423,75 @@
             
             container.appendChild(card);
         });
+    }
+
+    // === LOAD EXPERIENCE FROM JSON ===
+    function loadExperience() {
+        return new Promise(function(resolve, reject) {
+            var container = document.getElementById("experienceTimeline");
+            var jsonPath = container.getAttribute("data-json");
+            
+            if (!jsonPath) {
+                resolve();
+                return;
+            }
+            
+            fetch(jsonPath)
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(data) {
+                    renderExperience(data.experiences);
+                    resolve();
+                })
+                .catch(function(error) {
+                    console.error("Error loading experience:", error);
+                    resolve();
+                });
+        });
+    }
+
+    function renderExperience(experiences) {
+        var container = document.getElementById("experienceTimeline");
+        container.innerHTML = "";
+        
+        experiences.forEach(function(exp, index) {
+            var item = document.createElement("div");
+            item.className = "timeline-item wow animate__fadeInLeft";
+            item.setAttribute("data-wow-delay", ((index + 1) * 0.1) + "s");
+            
+            var detailsHTML = exp.details.map(function(detail) {
+                return "<li>" + detail + "</li>";
+            }).join("");
+            
+            item.innerHTML = 
+                '<div class="timeline-dot"></div>' +
+                '<div class="timeline-content">' +
+                    '<span class="timeline-year">' + exp.period + '</span>' +
+                    '<div class="timeline-header">' +
+                        '<h3>' + exp.title + '</h3>' +
+                        (exp.icon ? '<i class="' + exp.icon + '"></i>' : '') +
+                    '</div>' +
+                    '<h4>' + exp.company + '</h4>' +
+                    '<p class="timeline-description">' + exp.shortDescription + '</p>' +
+                    '<button class="timeline-toggle">Show more</button>' +
+                    '<div class="timeline-details">' +
+                        '<ul>' + detailsHTML + '</ul>' +
+                    '</div>' +
+                '</div>';
+            
+            container.appendChild(item);
+        });
+        
+        if (typeof WOW !== "undefined") {
+            new WOW({
+                boxClass: "wow",
+                animateClass: "animate__animated",
+                offset: 100,
+                mobile: true,
+                live: true
+            }).init();
+        }
     }
 
     // === PROJECT MODAL ===

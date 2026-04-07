@@ -1,0 +1,82 @@
+{
+    "experiences": [
+        {
+            "id": 1,
+            "period": "Jan 2020 - Present",
+            "title": "Sr. Software Engineer",
+            "company": "Alnura Makers (Freelance)",
+            "icon": "ri-briefcase-line",
+            "shortDescription": "Delivering custom software solutions across web, mobile & IoT platforms.",
+            "details": [
+                "Built applications using modern stacks including backend services, REST APIs",
+                "Interactive apps using Unity for cross-platform deployment",
+                "End-to-end development from design to deployment"
+            ]
+        },
+        {
+            "id": 2,
+            "period": "Agt 2022 - Jan 2026",
+            "title": "Chief Technology Officer",
+            "company": "PT. Pancar Teknologi Indonesia",
+            "icon": "ri-government-line",
+            "shortDescription": "Leading end-to-end development of multiple internal platforms.",
+            "details": [
+                "Built GPS tracking ecosystem with Arduino devices & real-time dashboards",
+                "Designed & developed ERP, attendance (PWA), and asset management systems",
+                "Hands-on leadership across full development lifecycle"
+            ]
+        },
+        {
+            "id": 3,
+            "period": "Feb 2021 - Agt 2021",
+            "title": "Sr. Full Stack Developer",
+            "company": "PT. Duta Esa Adiperkasa",
+            "icon": "ri-code-s-slash-line",
+            "shortDescription": "Web-based ERP system for telecommunications manufacturing.",
+            "details": [
+                "Improved workflow efficiency through digital reporting",
+                "Collaborated with cross-functional teams",
+                "Digitized internal processes and workflows"
+            ]
+        },
+        {
+            "id": 4,
+            "period": "Agt 2019 - Jul 2020",
+            "title": "Unity Developer",
+            "company": "Mizan Application Publisher",
+            "icon": "ri-gamepad-line",
+            "shortDescription": "Interactive educational game for children on Android.",
+            "details": [
+                "Focus on engaging gameplay and learning experience",
+                "Built core game systems and interactive features",
+                "AR-integrated educational content"
+            ]
+        },
+        {
+            "id": 5,
+            "period": "Jun 2015 - Jun 2019",
+            "title": "Multimedia Teacher",
+            "company": "SMK Mandalasari / Directorate",
+            "icon": "ri-microscope-line",
+            "shortDescription": "Teaching multimedia and video editing.",
+            "details": [
+                "Developed structured learning materials",
+                "Improved student engagement through creative teaching",
+                "Video editing and multimedia production"
+            ]
+        },
+        {
+            "id": 6,
+            "period": "Agt 2014",
+            "title": "Web Developer",
+            "company": "DISKOMINFO Jawa Barat",
+            "icon": "ri-global-line",
+            "shortDescription": "Web-based attendance system during internship.",
+            "details": [
+                "Developed attendance system using native PHP",
+                "Gained early experience in web development",
+                "Requirement analysis and system design"
+            ]
+        }
+    ]
+}
