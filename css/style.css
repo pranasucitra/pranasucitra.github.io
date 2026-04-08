@@ -685,16 +685,16 @@ img {
     margin: 0 auto;
 }
 
-.timeline::before {
+/* .timeline::before {
     content: '';
     position: absolute;
-    left: 21px;
+    left: -20px;
     top: 0;
     bottom: 0;
     width: 2px;
     background: linear-gradient(to bottom, var(--accent-primary) 0%, var(--accent-secondary) 50%, var(--accent-primary) 100%);
     box-shadow: 0 0 15px rgba(10, 112, 117, 0.4);
-}
+} */
 
 .timeline-item {
     position: relative;
@@ -1609,6 +1609,23 @@ footer p {
     line-height: 1.7;
     margin-bottom: 20px;
     text-align: justify;
+    max-height: 150px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.project-modal-description::-webkit-scrollbar {
+    width: 4px;
+}
+
+.project-modal-description::-webkit-scrollbar-track {
+    background: var(--surface);
+    border-radius: 2px;
+}
+
+.project-modal-description::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 2px;
 }
 
 .project-modal-tags {
@@ -1728,6 +1745,177 @@ footer p {
     background: var(--accent-hover);
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(81, 163, 172, 0.6);
+}
+
+/* === EXPERIENCE - LinkedIn Style === */
+.exp-company {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+}
+
+.exp-company-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.exp-company-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    background: var(--accent);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: var(--bg-darkest);
+    margin-top: 4px;
+}
+
+.exp-company-info h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 4px 0;
+}
+
+.exp-location {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.exp-positions {
+    position: relative;
+    padding-left: 0;
+    margin-left: 6px;
+    border-left: 2px solid var(--accent);
+    padding-top: 4px;
+}
+
+.exp-position {
+    position: relative;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.exp-position::before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    background: var(--accent);
+    border-radius: 50%;
+    border: 3px solid var(--surface);
+}
+
+.exp-role {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+}
+
+.exp-role h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.exp-type {
+    font-size: 0.75rem;
+    color: var(--accent);
+    background: rgba(81, 163, 172, 0.15);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.exp-meta {
+    margin-bottom: 8px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.exp-location-inline {
+    display: inline;
+}
+
+.exp-description {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.exp-toggle-btn {
+    background: none;
+    border: none;
+    color: var(--accent);
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 4px 0;
+    margin-top: 2px;
+}
+
+.exp-toggle-btn:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .exp-company {
+        padding: 16px;
+    }
+    
+    .exp-company-header {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .exp-company-icon {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .exp-position {
+        padding-left: 24px;
+    }
+    
+    .exp-position::before {
+        left: -6px;
+        width: 10px;
+        height: 10px;
+    }
+    
+    .exp-positions {
+        margin-left: 0;
+    }
+    
+    .exp-role {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    
+    .exp-type {
+        font-size: 0.7rem;
+    }
+    
+    .exp-location-inline {
+        display: none;
+    }
 }
 
 /* === END === */

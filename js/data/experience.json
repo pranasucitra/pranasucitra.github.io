@@ -2,80 +2,105 @@
     "experiences": [
         {
             "id": 1,
-            "period": "Jan 2020 - Present",
-            "title": "Sr. Software Engineer",
-            "company": "Alnura Makers (Freelance)",
-            "icon": "ri-briefcase-line",
-            "shortDescription": "Delivering custom software solutions across web, mobile & IoT platforms.",
-            "details": [
-                "Built applications using modern stacks including backend services, REST APIs",
-                "Interactive apps using Unity for cross-platform deployment",
-                "End-to-end development from design to deployment"
+            "company": "PT. Pancar Teknologi Indonesia",
+            "companyIcon": "ri-government-line",
+            "location": "Bandung, West Java, Indonesia",
+            "type": "Hybrid",
+            "positions": [
+                {
+                    "title": "Chief Technology Officer",
+                    "period": "Oct 2024 - Present",
+                    "duration": "1 yr 7 mos",
+                    "employmentType": "Part-time",
+                    "description": "Led end-to-end development of internal platforms including GPS tracking ecosystem (Arduino + backend + real-time dashboard), ERP, PWA attendance, and asset management systems. Focused on scalable architecture and system reliability."
+                },
+                {
+                    "title": "Senior Software Engineer",
+                    "period": "Aug 2022 - Oct 2024",
+                    "duration": "2 yrs 3 mos",
+                    "employmentType": "Full-time",
+                    "description": "Developed and maintained large-scale software systems, contributed to technology strategy, and ensured code quality and performance across the stack."
+                }
             ]
         },
         {
             "id": 2,
-            "period": "Agt 2022 - Jan 2026",
-            "title": "Chief Technology Officer",
-            "company": "PT. Pancar Teknologi Indonesia",
-            "icon": "ri-government-line",
-            "shortDescription": "Leading end-to-end development of multiple internal platforms.",
-            "details": [
-                "Built GPS tracking ecosystem with Arduino devices & real-time dashboards",
-                "Designed & developed ERP, attendance (PWA), and asset management systems",
-                "Hands-on leadership across full development lifecycle"
+            "company": "Alnura Makers",
+            "companyIcon": "ri-briefcase-line",
+            "location": "Bandung, West Java, Indonesia",
+            "type": "Hybrid",
+            "positions": [
+                {
+                    "title": "Freelance Full Stack Developer",
+                    "period": "Jan 2020 - Present",
+                    "duration": "6 yrs 4 mos",
+                    "employmentType": "Freelance",
+                    "description": "Worked as a freelance full-stack developer delivering custom software solutions for multiple clients across web, mobile, and IoT platforms. Built and maintained applications using modern stacks, including backend services, REST APIs, and interactive apps using Unity (Desktop, WebGL, Android, iOS). Delivered end-to-end solutions, including system design, development, and deployment, as well as 3D printing prototyping services to support product development."
+                }
             ]
         },
         {
             "id": 3,
-            "period": "Feb 2021 - Agt 2021",
-            "title": "Sr. Full Stack Developer",
             "company": "PT. Duta Esa Adiperkasa",
-            "icon": "ri-code-s-slash-line",
-            "shortDescription": "Web-based ERP system for telecommunications manufacturing.",
-            "details": [
-                "Improved workflow efficiency through digital reporting",
-                "Collaborated with cross-functional teams",
-                "Digitized internal processes and workflows"
+            "companyIcon": "ri-code-s-slash-line",
+            "location": "Bandung, West Java, Indonesia",
+            "type": "Hybrid",
+            "positions": [
+                {
+                    "title": "Senior Full Stack Developer",
+                    "period": "Feb 2021 - Aug 2021",
+                    "duration": "7 mos",
+                    "employmentType": "Freelance",
+                    "description": "Developed a web-based ERP system for a telecommunications manufacturing company to manage business processes and financial reporting. Improved workflow efficiency by digitizing reporting and internal processes. Collaborated with cross-functional teams to ensure the system aligned with business requirements."
+                }
             ]
         },
         {
             "id": 4,
-            "period": "Agt 2019 - Jul 2020",
-            "title": "Unity Developer",
             "company": "Mizan Application Publisher",
-            "icon": "ri-gamepad-line",
-            "shortDescription": "Interactive educational game for children on Android.",
-            "details": [
-                "Focus on engaging gameplay and learning experience",
-                "Built core game systems and interactive features",
-                "AR-integrated educational content"
+            "companyIcon": "ri-gamepad-line",
+            "location": "Bandung, West Java, Indonesia",
+            "type": "Hybrid",
+            "positions": [
+                {
+                    "title": "Unity Developer",
+                    "period": "Aug 2019 - Jul 2020",
+                    "duration": "1 yr",
+                    "employmentType": "Contract",
+                    "description": "Developed an interactive educational game for children on Android using Unity, focusing on engaging gameplay and learning experience. Designed user-friendly interfaces optimized for young users to improve accessibility and usability. Built core game systems and interactive features to enhance user engagement."
+                }
             ]
         },
         {
             "id": 5,
-            "period": "Jun 2015 - Jun 2019",
-            "title": "Multimedia Teacher",
-            "company": "SMK Mandalasari / Directorate",
-            "icon": "ri-microscope-line",
-            "shortDescription": "Teaching multimedia and video editing.",
-            "details": [
-                "Developed structured learning materials",
-                "Improved student engagement through creative teaching",
-                "Video editing and multimedia production"
+            "company": "Direktorat Sekolah Menengah Kejuruan",
+            "companyIcon": "ri-microscope-line",
+            "location": "Bandung, West Java, Indonesia",
+            "type": "On-site",
+            "positions": [
+                {
+                    "title": "Multimedia Teacher",
+                    "period": "Jun 2015 - Jun 2019",
+                    "duration": "4 yrs 1 mo",
+                    "employmentType": "Full-time",
+                    "description": "Taught multimedia and video editing, developing structured learning materials and improving student engagement through creative teaching methods."
+                }
             ]
         },
         {
             "id": 6,
-            "period": "Agt 2014",
-            "title": "Web Developer",
-            "company": "DISKOMINFO Jawa Barat",
-            "icon": "ri-global-line",
-            "shortDescription": "Web-based attendance system during internship.",
-            "details": [
-                "Developed attendance system using native PHP",
-                "Gained early experience in web development",
-                "Requirement analysis and system design"
+            "company": "Dinas Komunikasi dan Informatika",
+            "companyIcon": "ri-global-line",
+            "location": "Bandung, West Java, Indonesia",
+            "type": "Hybrid",
+            "positions": [
+                {
+                    "title": "Web Developer",
+                    "period": "Aug 2014",
+                    "duration": "1 mo",
+                    "employmentType": "Internship",
+                    "description": "Developed a web-based attendance system using native PHP during internship, gaining early experience in web development and requirement analysis."
+                }
             ]
         }
     ]

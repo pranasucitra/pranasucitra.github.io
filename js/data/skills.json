@@ -13,32 +13,32 @@
         {
             "name": "Backend",
             "icon": "ri-server-line",
-            "skills": ["ASP.NET", "Node.js", "Laravel", "CodeIgniter", "REST API", "GraphQL"]
+            "skills": ["REST API", "GraphQL", "ASP.NET", "Node.js", "CodeIgniter"]
         },
         {
             "name": "Database",
             "icon": "ri-database-line",
-            "skills": ["MySQL", "MongoDB", "PostgreSQL", "SQL Server", "Redis"]
+            "skills": ["MySQL", "SQL Server", "Redis", "Firebase", "SQLite", "Oracle", "MariaDB"]
         },
         {
             "name": "IoT & Hardware",
             "icon": "ri-router-line",
-            "skills": ["Arduino", "ESP32", "Raspberry Pi", "Embedded Systems", "PCB Design"]
+            "skills": ["Arduino", "ESP32", "Embedded Systems", "MQTT", "WebSocket", "Real-time Data Processing"]
         },
         {
             "name": "Tools & DevOps",
             "icon": "ri-terminal-box-line",
-            "skills": ["Git", "Docker", "AWS", "CI/CD", "Linux", "Nginx"]
+            "skills": ["Git", "Docker", "CI/CD", "Linux", "Nginx"]
         },
         {
             "name": "Mobile & Gaming",
             "icon": "ri-gamepad-line",
-            "skills": ["Unity", "Android", "iOS", "C# Unity", "AR Development"]
+            "skills": ["Unity", "Android", "iOS", "C# Unity", "AR/VR Development", "Mobile App Development", "Cross-platform Development", "Performance Optimization", "Testing and Debugging"]
         },
         {
             "name": "Soft Skills",
             "icon": "ri-team-line",
-            "skills": ["Team Leadership", "Project Management", "Problem Solving", "Communication"]
+            "skills": ["Team Leadership", "Project Management", "Problem Solving", "Communication", "Collaboration", "Adaptability"]
         }
     ]
 }

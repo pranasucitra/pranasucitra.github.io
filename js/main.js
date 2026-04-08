@@ -337,6 +337,14 @@
         
         if (!tabs.length || !cards.length) return;
         
+        var categoryMap = {
+            "mobile": ["android", "ios", "flutter"],
+            "web": ["web", "php", "javascript", "mysql"],
+            "pwa": ["pwa"],
+            "iot": ["gps", "tcp/ip", "traccar"],
+            "arvr": ["ar", "vr", "unity", "webgl"]
+        };
+        
         tabs.forEach(function(tab) {
             tab.addEventListener("click", function() {
                 var category = this.getAttribute("data-category");
@@ -347,9 +355,19 @@
                 this.classList.add("active");
                 
                 cards.forEach(function(card) {
-                    var cardCategory = card.getAttribute("data-category");
+                    var cardTags = card.getAttribute("data-tags") || "";
+                    var tagsArray = cardTags.split(",").map(function(t) { return t.trim().toLowerCase(); });
                     
-                    if (category === "all" || cardCategory === category) {
+                    var isMatch = false;
+                    if (category === "all") {
+                        isMatch = true;
+                    } else if (categoryMap[category]) {
+                        isMatch = categoryMap[category].some(function(c) { 
+                            return tagsArray.includes(c); 
+                        });
+                    }
+                    
+                    if (isMatch) {
                         card.style.display = "flex";
                         setTimeout(function() {
                             card.style.opacity = "1";
@@ -519,32 +537,45 @@
         container.innerHTML = "";
         
         experiences.forEach(function(exp, index) {
+            var positionsHTML = "";
+            
+            exp.positions.forEach(function(pos, posIndex) {
+                var hasMultiple = exp.positions.length > 1;
+                
+                positionsHTML += 
+                    '<div class="exp-position ' + (hasMultiple ? 'multi' : '') + '">' +
+                        '<div class="exp-role">' +
+                            '<h4>' + pos.title + '</h4>' +
+                            '<span class="exp-type">' + pos.employmentType + '</span>' +
+                        '</div>' +
+                        '<div class="exp-meta">' +
+                            '<span class="exp-period">' + pos.period + ' • ' + pos.duration + '</span>' +
+                            '<span class="exp-location-inline"> • ' + exp.location + ' • ' + exp.type + '</span>' +
+                        '</div>' +
+                        '<p class="exp-description">' + pos.description + '</p>' +
+                    '</div>';
+            });
+            
             var item = document.createElement("div");
-            item.className = "timeline-item wow animate__fadeInUpBig";
+            item.className = "exp-company wow animate__fadeInUp";
             item.setAttribute("data-wow-delay", ((index + 1) * 0.1) + "s");
             
-            var detailsHTML = exp.details.map(function(detail) {
-                return "<li>" + detail + "</li>";
-            }).join("");
-            
             item.innerHTML = 
-                '<div class="timeline-dot"></div>' +
-                '<div class="timeline-content">' +
-                    '<span class="timeline-year">' + exp.period + '</span>' +
-                    '<div class="timeline-header">' +
-                        '<h3>' + exp.title + '</h3>' +
-                        (exp.icon ? '<i class="' + exp.icon + '"></i>' : '') +
+                '<div class="exp-company-header">' +
+                    '<div class="exp-company-icon">' +
+                        '<i class="' + exp.companyIcon + '"></i>' +
                     '</div>' +
-                    '<h4>' + exp.company + '</h4>' +
-                    '<p class="timeline-description">' + exp.shortDescription + '</p>' +
-                    '<button class="timeline-toggle">Show more</button>' +
-                    '<div class="timeline-details">' +
-                        '<ul>' + detailsHTML + '</ul>' +
+                    '<div class="exp-company-info">' +
+                        '<h3>' + exp.company + '</h3>' +
+                        '<span class="exp-location">' + exp.location + ' • ' + exp.type + '</span>' +
                     '</div>' +
-                '</div>';
+                '</div>' +
+                '<div class="exp-positions">' + positionsHTML + '</div>';
             
             container.appendChild(item);
         });
+        
+        initExperienceCollapsible();
         
         if (typeof WOW !== "undefined") {
             new WOW({
@@ -555,6 +586,36 @@
                 live: true
             }).init();
         }
+    }
+    
+    function initExperienceCollapsible() {
+        var descriptions = document.querySelectorAll('.exp-description');
+        descriptions.forEach(function(desc) {
+            var text = desc.textContent;
+            var fullText = text;
+            var isLong = text.length > 200;
+            
+            if (isLong) {
+                var truncated = text.substring(0, 200) + '...';
+                desc.innerHTML = truncated;
+                desc.dataset.full = fullText;
+                desc.dataset.truncated = truncated;
+                
+                var btn = document.createElement('button');
+                btn.className = 'exp-toggle-btn';
+                btn.textContent = 'See more';
+                btn.style.cssText = 'background:none;border:none;color:var(--accent);cursor:pointer;font-size:0.85rem;padding:0;margin-top:4px;';
+                
+                btn.addEventListener('click', function() {
+                    var isExpanded = desc.dataset.expanded === 'true';
+                    desc.innerHTML = isExpanded ? desc.dataset.truncated : desc.dataset.full;
+                    desc.dataset.expanded = isExpanded ? 'false' : 'true';
+                    btn.textContent = isExpanded ? 'See more' : 'Show less';
+                });
+                
+                desc.parentNode.insertBefore(btn, desc.nextSibling);
+            }
+        });
     }
 
     // === PROJECT MODAL ===
@@ -576,7 +637,8 @@
                 var category = card.getAttribute("data-category") || "";
                 
                 modal.querySelector(".project-modal-title").textContent = title;
-                modal.querySelector(".project-modal-description").textContent = description;
+                var descWithBreaks = description.replace(/\\n/g, "<br>");
+                modal.querySelector(".project-modal-description").innerHTML = descWithBreaks;
                 modal.querySelector(".project-modal-image img").src = image;
                 modal.querySelector(".project-modal-category").textContent = category.toUpperCase();
                 

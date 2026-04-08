@@ -2,53 +2,173 @@
     "projects": [
         {
             "id": 1,
-            "category": "iot",
-            "title": "GPS Tracking System",
-            "shortDescription": "Real-time vehicle tracking with Arduino integration, backend services, and web dashboard.",
-            "description": "Real-time vehicle tracking system with Arduino integration, backend services, and web dashboard. Features include live location monitoring, route history, geofencing alerts, and comprehensive reporting dashboard.",
+            "category": "arvr",
+            "title": "UID - Unity In Diversity",
+            "shortDescription": "VR app pengenalan 6 Agama di Indonesia",
+            "description": "Aplikasi VR pengenalan 6 Agama di Indonesia dengan pengalaman immersive. User dapat mengeksplorasi核Informasi agama secara interaktif.\\n\\nTech: Unity, VR SDK, C#\\nPlatform: Android\\nClient: Mizan Application Publisher",
             "image": "assets/img/projects/project1.svg",
-            "tags": ["C#", "ASP.NET", "Arduino", "MySQL", "WebSocket"],
-            "link": "https://github.com/pranasucitra"
+            "tags": ["Unity", "VR", "Android"],
+            "link": ""
         },
         {
             "id": 2,
-            "category": "web",
-            "title": "ERP System",
-            "shortDescription": "Web-based ERP for telecommunications company with business process and financial reporting.",
-            "description": "Web-based ERP system for telecommunications manufacturing company. Includes modules for inventory management, production planning, HR, finance, and comprehensive business intelligence reporting.",
-            "image": "assets/img/projects/project2.svg",
-            "tags": ["PHP", "MySQL", "JavaScript", "Bootstrap", "Web API"],
-            "link": "https://github.com/pranasucitra"
+            "category": "arvr",
+            "title": "Yuk, Shalat!",
+            "shortDescription": "AR edukasi wudhu & sulphate untuk anak",
+            "description": "Aplikasi edukasi AR pengenalan wudhu dan sulphate dengan karakter Shaki & Shakina. Fitur: AR gerakan wudhu & sulphate, puzzle urutan, murottal dengan doa latin & arab.\\n\\nTech: Unity, AR Foundation, C#\\nPlatform: Android\\nClient: Mizan Application Publisher",
+            "image": "assets/img/projects/project1.svg",
+            "tags": ["Unity", "AR", "Android"],
+            "link": ""
         },
         {
             "id": 3,
             "category": "arvr",
-            "title": "Educational Game",
-            "shortDescription": "Interactive educational game for children using Unity with engaging gameplay and AR features.",
-            "description": "Interactive educational game for children developed using Unity. Features engaging gameplay mechanics, AR integration for immersive learning experiences, and progress tracking for parents and educators.",
-            "image": "assets/img/projects/project3.svg",
-            "tags": ["Unity", "C#", "AR", "Android", "iOS"],
-            "link": "https://github.com/pranasucitra"
+            "title": "Panduan Shalat AR",
+            "shortDescription": "AR panduan wudhu & sulphate lengkap",
+            "description": "Panduan wudhu dan sulphate dengan AR + animasi 3D. Dilengkapi doa sebelum/sesudah wudhu dan bacaan sulphate lengkap dengan latin & arab.\\n\\nTech: Unity, AR Foundation, C#\\nPlatform: Android\\nClient: Mizan Application Publisher",
+            "image": "assets/img/projects/project1.svg",
+            "tags": ["Unity", "AR", "Android"],
+            "link": ""
         },
         {
             "id": 4,
-            "category": "pwa",
-            "title": "Asset Management PWA",
-            "shortDescription": "PWA-based attendance and asset management system for business operations.",
-            "description": "Progressive Web Application for attendance and asset management. Features offline capability, push notifications, barcode scanning, real-time sync, and comprehensive analytics dashboard.",
+            "category": "arvr",
+            "title": "Angka Ajaib",
+            "shortDescription": "AR kenal angka & kosakata Inggris",
+            "description": "Aplikasi AR mengenal angka dengan fitur tracing menulis angka dan games berhitung. Desain lucu untuk memudahkan anak belajar.\\n\\nTech: Unity, AR Foundation, C#\\nPlatform: Android\\nClient: Mizan Application Publisher",
             "image": "assets/img/projects/project1.svg",
-            "tags": ["React", "Node.js", "PWA", "MongoDB"],
-            "link": "https://github.com/pranasucitra"
+            "tags": ["Unity", "AR", "Android"],
+            "link": ""
         },
         {
             "id": 5,
+            "category": "arvr",
+            "title": "Rafa Safa: Hijaiyah",
+            "shortDescription": "AR belajar 29 huruf Hijaiyah",
+            "description": "Petualangan AR Rafa Safa di Taman Hijaiyah mengenal 29 huruf Hijaiyah dengan animasi menarik dan interaktif.\\n\\nTech: Unity, AR Foundation, C#\\nPlatform: Android\\nClient: Mizan Application Publisher",
+            "image": "assets/img/projects/project1.svg",
+            "tags": ["Unity", "AR", "Android"],
+            "link": ""
+        },
+        {
+            "id": 6,
+            "category": "arvr",
+            "title": "My First Quranic Words",
+            "shortDescription": "AR kenal hewan, buah & sayuran",
+            "description": "Aplikasi AR yang menambah nilai buku dengan mengenali bentuk hewan, buah-buahan, sayuran. Dilengkapi games interaktif.\\n\\nTech: Unity, AR Foundation, C#\\nPlatform: Android\\nClient: Mizan Application Publisher",
+            "image": "assets/img/projects/project1.svg",
+            "tags": ["Unity", "AR", "Android"],
+            "link": ""
+        },
+        {
+            "id": 7,
+            "category": "arvr",
+            "title": "Yuk, Berburu Warna & Angka!",
+            "shortDescription": "AR games warna & angka untuk anak",
+            "description": "Kumpulan games AR: Berburu Warna, Mewarnai, Color Maze, AR Tracing Angka, AR Hitung Angka.\\n\\nTech: Unity, AR Foundation, C#\\nPlatform: Android\\nClient: Mizan Application Publisher",
+            "image": "assets/img/projects/project1.svg",
+            "tags": ["Unity", "AR", "Android"],
+            "link": ""
+        },
+        {
+            "id": 8,
+            "category": "arvr",
+            "title": "Yuk, Mencari Bentuk!",
+            "shortDescription": "AR games kenal bentuk untuk anak",
+            "description": "Games AR: Tebak siluet bentuk, Pindai Tangram, Kartu Tangram. Belajar bentuk dasar (bulat, persegi, dll) dengan cara seru.\\n\\nTech: Unity, AR Foundation, C#\\nPlatform: Android\\nClient: Mizan Application Publisher",
+            "image": "assets/img/projects/project1.svg",
+            "tags": ["Unity", "AR", "Android"],
+            "link": ""
+        },
+        {
+            "id": 9,
+            "category": "arvr",
+            "title": "Mini Game WebGL",
+            "shortDescription": "Boardgame digital untuk web",
+            "description": "Aplikasi mini game boardgame untuk media pembelajaran yang di-digitalisasi. Platform WebGL untuk akses via browser.\\n\\nTech: Unity, WebGL, C#\\nPlatform: Web\\nClient: PeaceGeneration Indonesia",
+            "image": "assets/img/projects/project1.svg",
+            "tags": ["Unity", "WebGL", "Web"],
+            "link": ""
+        },
+        {
+            "id": 10,
+            "category": "web",
+            "title": "DEALOPA (ERP)",
+            "shortDescription": "ERP manufaktur: inventory, sales, purchasing, accounting",
+            "description": "Sistem ERP terintegrasi untuk PT Duta Esa Adiperkasa:\\n• Inventory & Manufacturing: HPP calculation, Work Order\\n• Sales & Finance: Invoice, laporan keuangan\\n• Purchasing: Management bahan baku\\n• Accounting: Pencatatan biaya\\n\\nTech: PHP, MySQL, JavaScript, Bootstrap",
+            "image": "assets/img/projects/project1.svg",
+            "tags": ["PHP", "MySQL", "JavaScript", "Web"],
+            "link": ""
+        },
+        {
+            "id": 11,
+            "category": "mobile",
+            "title": "FURNIPEDIA",
+            "shortDescription": "E-commerce full stack dengan payment gateway",
+            "description": "Aplikasi e-commerce full stack untuk furniture:\\n• Frontend: Flutter (Android & iOS)\\n• Backend: PHP REST API\\n• Payment: Integrasi Duitku.com\\n• CMS: Management produk, user, order\\n\\nTech: Flutter, PHP, MySQL, Duitku SDK",
+            "image": "assets/img/projects/project1.svg",
+            "tags": ["Flutter", "Duitku", "Android", "iOS"],
+            "link": ""
+        },
+        {
+            "id": 12,
+            "category": "pwa",
+            "title": "HRIS",
+            "shortDescription": "Sistem informasi data karyawan",
+            "description": "Human Resources Information System:\\n• Data presensi karyawan\\n• Data lengkap karyawan (profile, contract, dll)\\n• CMS/Dashboard untuk admin\\n• Berbasis PWA dengan Flutter WebView\\n\\nTech: Flutter, PWA, Web, MySQL",
+            "image": "assets/img/projects/project1.svg",
+            "tags": ["PWA", "Flutter", "Web"],
+            "link": ""
+        },
+        {
+            "id": 13,
             "category": "iot",
-            "title": "IoT Dashboard",
-            "shortDescription": "Real-time web dashboard for IoT devices with data visualization and analytics.",
-            "description": "Real-time web dashboard for IoT devices with comprehensive data visualization and analytics. Features live charts, device status monitoring, automated alerts, and RESTful API integration.",
-            "image": "assets/img/projects/project2.svg",
-            "tags": ["TypeScript", "WebSocket", "Docker", "React", "Node.js"],
-            "link": "https://github.com/pranasucitra"
+            "title": "AMS (Asset Management)",
+            "shortDescription": "Manajemen aset dengan GPS & Traccar",
+            "description": "Asset Management System:\\n• Data lengkap aset dan total inventaris\\n• Lokasi aset dengan GPS\\n• TCP/IP Listener untuk parser data GPS\\n• Integrasi dengan Traccar Open Source\\n\\nTech: PHP, MySQL, GPS, TCP/IP, Traccar",
+            "image": "assets/img/projects/project1.svg",
+            "tags": ["GPS", "TCP/IP", "Traccar", "Web"],
+            "link": ""
+        },
+        {
+            "id": 14,
+            "category": "web",
+            "title": "WMS (Warehouse Management)",
+            "shortDescription": "Web apps pengelolaan stok barang",
+            "description": "Warehouse Management System:\\n• Pengelolaan stok barang di gudang\\n• Proses Inbound (penerimaan barang)\\n• Proses Outbound (pengeluaran barang)\\n• Tracking lokasi rak\\n\\nTech: PHP, MySQL, JavaScript\\nClient: PT Duta Esa Adiperkasa",
+            "image": "assets/img/projects/project1.svg",
+            "tags": ["Web", "MySQL"],
+            "link": ""
+        },
+        {
+            "id": 15,
+            "category": "iot",
+            "title": "COW Tracking",
+            "shortDescription": "Dashboard GPS pantau Combat tower",
+            "description": "Combat On Wheel (COW) Tracking Dashboard:\\n• Pantau penyebaran Combat tower portable\\n• Real-time GPS tracking\\n• Integrasi device GPS Teltonika\\n• TCP/IP listener via Traccar\\n\\nTech: PHP, GPS, Traccar, Dashboard\\nClient: PT Dayamitra Telekomunikasi (Mitratel) - Telkom Indonesia",
+            "image": "assets/img/projects/project1.svg",
+            "tags": ["GPS", "Dashboard", "Traccar", "IoT"],
+            "link": ""
+        },
+        {
+            "id": 16,
+            "category": "web",
+            "title": "ASETQ",
+            "shortDescription": "Asset management dengan forum & marketplace",
+            "description": "Aplikasi asset management untuk barang pribadi dan berharga:\\n• Register & management aset\\n• Forum diskusi antar user\\n• Fitur marketplace/jual beli\\n• Admin dashboard\\n\\nTech: PHP, MySQL, JavaScript\\nProduk: PT Pancar Teknologi Indonesia",
+            "image": "assets/img/projects/project1.svg",
+            "tags": ["Web", "Forum", "Marketplace"],
+            "link": ""
+        },
+        {
+            "id": 17,
+            "category": "web",
+            "title": "Ecopack.id",
+            "shortDescription": "E-commerce kemasan makanan kertas kraft",
+            "description": "Website e-commerce untuk Ecopack:\\n• Spesialis kemasan kertas kraft sejak 2019\\n• Mencetak jutaan kemasan dari ribuan brand\\n• Katalog produk, keranjang, checkout\\n• CMS manajemen produk & order\\n\\nTech: PHP, MySQL, JavaScript\\nLink: https://www.ecopack.id",
+            "image": "assets/img/projects/project1.svg",
+            "tags": ["Web", "PHP", "MySQL", "E-commerce"],
+            "link": "https://www.ecopack.id"
         }
     ]
 }
