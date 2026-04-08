@@ -550,7 +550,8 @@
                         '</div>' +
                         '<div class="exp-meta">' +
                             '<span class="exp-period">' + pos.period + ' • ' + pos.duration + '</span>' +
-                            '<span class="exp-location-inline"> • ' + exp.location + ' • ' + exp.type + '</span>' +
+                            '<span class="exp-location-inline"> </span>' +
+                            // '<span class="exp-location-inline"> • ' + exp.location + ' • ' + exp.type + '</span>' +
                         '</div>' +
                         '<p class="exp-description">' + pos.description + '</p>' +
                     '</div>';
