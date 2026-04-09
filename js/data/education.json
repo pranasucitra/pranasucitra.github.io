@@ -1,0 +1,13 @@
+{
+    "educations": [
+        {
+            "id": 1,
+            "institution": "Universitas Komputer Indonesia (UNIKOM)",
+            "degree": "Bachelor of Engineering (BEng)",
+            "field": "Computer and Information Sciences",
+            "period": "2011 - 2018",
+            "description": "Faculty of Engineering & Computer Science - Informatics Engineering Study Program",
+            "icon": "ri-graduation-cap-line"
+        }
+    ]
+}

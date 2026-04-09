@@ -50,6 +50,12 @@
         // === LOAD EXPERIENCE FROM JSON ===
         loadExperience();
         
+        // === LOAD EDUCATION FROM JSON ===
+        loadEducation();
+        
+        // === LOAD CERTIFICATES FROM JSON ===
+        loadCertificates();
+        
         // === GO TO TOP BUTTON ===
         initGoToTop();
         
@@ -616,6 +622,92 @@
                 
                 desc.parentNode.insertBefore(btn, desc.nextSibling);
             }
+        });
+    }
+    
+    // === LOAD EDUCATION FROM JSON ===
+    function loadEducation() {
+        var container = document.getElementById("educationTimeline");
+        var jsonPath = container.getAttribute("data-json");
+        
+        if (!jsonPath) return;
+        
+        fetch(jsonPath)
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                renderEducation(data.educations);
+            })
+            .catch(function(error) {
+                console.error("Error loading education:", error);
+            });
+    }
+    
+    function renderEducation(educations) {
+        var container = document.getElementById("educationTimeline");
+        container.innerHTML = "";
+        
+        educations.forEach(function(edu, index) {
+            var item = document.createElement("div");
+            item.className = "edu-item wow animate__fadeInUp";
+            item.setAttribute("data-wow-delay", (index * 0.1) + "s");
+            
+            item.innerHTML = 
+                '<div class="edu-icon">' +
+                    '<i class="' + edu.icon + '"></i>' +
+                '</div>' +
+                '<div class="edu-content">' +
+                    '<h3>' + edu.institution + '</h3>' +
+                    '<p class="edu-degree">' + edu.degree + '</p>' +
+                    '<p class="edu-field">' + edu.field + '</p>' +
+                    '<p class="edu-period">' + edu.period + '</p>' +
+                    '<p class="edu-description">' + edu.description + '</p>' +
+                '</div>';
+            
+            container.appendChild(item);
+        });
+    }
+    
+    // === LOAD CERTIFICATES FROM JSON ===
+    function loadCertificates() {
+        var container = document.getElementById("certificatesGrid");
+        var jsonPath = container.getAttribute("data-json");
+        
+        if (!jsonPath) return;
+        
+        fetch(jsonPath)
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                renderCertificates(data.courses);
+            })
+            .catch(function(error) {
+                console.error("Error loading certificates:", error);
+            });
+    }
+    
+    function renderCertificates(courses) {
+        var container = document.getElementById("certificatesGrid");
+        container.innerHTML = "";
+        
+        courses.forEach(function(course, index) {
+            var item = document.createElement("div");
+            item.className = "cert-item wow animate__fadeInUp";
+            item.setAttribute("data-wow-delay", (index * 0.1) + "s");
+            
+            item.innerHTML = 
+                '<div class="cert-icon">' +
+                    '<i class="' + course.icon + '"></i>' +
+                '</div>' +
+                '<div class="cert-content">' +
+                    '<h4>' + course.title + '</h4>' +
+                    '<p class="cert-provider">' + course.provider + '</p>' +
+                    '<p class="cert-id">ID: ' + course.date + '</p>' +
+                '</div>';
+            
+            container.appendChild(item);
         });
     }
 

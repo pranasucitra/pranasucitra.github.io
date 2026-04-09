@@ -1,0 +1,18 @@
+{
+    "courses": [
+        {
+            "id": 1,
+            "title": "Building App Android",
+            "provider": "Be-Logix Indonesia",
+            "date": "16.10.BLX-UNKM.TIF.01137",
+            "icon": "ri-star-line"
+        },
+        {
+            "id": 2,
+            "title": "Java Apps Developer",
+            "provider": "Be-Logix Indonesia",
+            "date": "8981339659787622",
+            "icon": "ri-star-line"
+        }
+    ]
+}

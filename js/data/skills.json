@@ -39,6 +39,11 @@
             "name": "Soft Skills",
             "icon": "ri-team-line",
             "skills": ["Team Leadership", "Project Management", "Problem Solving", "Communication", "Collaboration", "Adaptability"]
+        },
+        {
+            "name": "Languages",
+            "icon": "ri-global-line",
+            "skills": ["Indonesia (Native)", "English (Professional)", "Sunda (Native)"]
         }
     ]
 }
