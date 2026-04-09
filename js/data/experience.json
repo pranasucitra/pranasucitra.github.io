@@ -2,29 +2,6 @@
     "experiences": [
         {
             "id": 1,
-            "company": "PT. Pancar Teknologi Indonesia",
-            "companyIcon": "ri-government-line",
-            "location": "Bandung, West Java, Indonesia",
-            "type": "Hybrid",
-            "positions": [
-                {
-                    "title": "Chief Technology Officer",
-                    "period": "Oct 2024 - Present",
-                    "duration": "1 yr 7 mos",
-                    "employmentType": "Part-time",
-                    "description": "Led end-to-end development of internal platforms including GPS tracking ecosystem (Arduino + backend + real-time dashboard), ERP, PWA attendance, and asset management systems. Focused on scalable architecture and system reliability."
-                },
-                {
-                    "title": "Sr. Software Engineer",
-                    "period": "Aug 2022 - Oct 2024",
-                    "duration": "2 yrs 3 mos",
-                    "employmentType": "Full-time",
-                    "description": "Developed and maintained large-scale software systems, contributed to technology strategy, and ensured code quality and performance across the stack."
-                }
-            ]
-        },
-        {
-            "id": 2,
             "company": "Alnura Makers",
             "companyIcon": "ri-briefcase-line",
             "location": "Bandung, West Java, Indonesia",
@@ -36,6 +13,29 @@
                     "duration": "6 yrs 4 mos",
                     "employmentType": "Freelance",
                     "description": "Worked as a freelance full-stack developer delivering custom software solutions for multiple clients across web, mobile, and IoT platforms. Built and maintained applications using modern stacks, including backend services, REST APIs, and interactive apps using Unity (Desktop, WebGL, Android, iOS). Delivered end-to-end solutions, including system design, development, and deployment, as well as 3D printing prototyping services to support product development."
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "company": "PT. Pancar Teknologi Indonesia",
+            "companyIcon": "ri-government-line",
+            "location": "Bandung, West Java, Indonesia",
+            "type": "Hybrid",
+            "positions": [
+                {
+                    "title": "Chief Technology Officer",
+                    "period": "Oct 2024 - Jan 2026",
+                    "duration": "1 yr 4 mos",
+                    "employmentType": "Part-time",
+                    "description": "Led end-to-end development of internal platforms including GPS tracking ecosystem (Arduino + backend + real-time dashboard), ERP, PWA attendance, and asset management systems. Focused on scalable architecture and system reliability."
+                },
+                {
+                    "title": "Sr. Software Engineer",
+                    "period": "Aug 2022 - Oct 2024",
+                    "duration": "2 yrs 3 mos",
+                    "employmentType": "Full-time",
+                    "description": "Developed and maintained large-scale software systems, contributed to technology strategy, and ensured code quality and performance across the stack."
                 }
             ]
         },
