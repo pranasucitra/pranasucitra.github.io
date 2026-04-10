@@ -269,7 +269,7 @@ img {
 
 .hero-name {
     font-family: 'Megrim', cursive;
-    font-size: clamp(2.6rem, 8vw, 5rem);
+    font-size: clamp(2.4rem, 6vw, 4rem);
     font-weight: 400;
     margin-bottom: 10px;
     color: var(--accent-primary);
@@ -618,7 +618,7 @@ img {
     font-size: 0.95rem;
     font-weight: 600;
     margin-bottom: 14px;
-    color: var(--accent-light);
+    color: var(--accent-primary);
     text-transform: uppercase;
     letter-spacing: 1px;
     display: flex;
@@ -654,9 +654,9 @@ img {
 }
 
 .tag:hover {
-    background: var(--main-accent);
+    background: var(--accent-light);
     color: var(--bg-darkest);
-    border-color: var(--main-accent);
+    /* border-color: var(--main-accent); */
     transform: scale(1.08);
 }
 
@@ -1124,8 +1124,8 @@ img {
     left: 12px;
     width: 36px;
     height: 36px;
-    background: var(--accent-light);
-    color: var(--text-primary);
+    background: var(--accent-primary);
+    color: var(--bg-darkest);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1172,8 +1172,8 @@ img {
 .project-tags .tag {
     padding: 5px 12px;
     font-size: 0.75rem;
-    background: var(--accent-primary);
-    color: var(--text-primary);
+    background: var(--accent-light);
+    color: var(--bg-darkest);
     border: none;
     border-radius: 15px;
 }
@@ -1483,7 +1483,7 @@ footer p {
 
 @media (max-width: 480px) {
     .hero-name {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
     .hero-title {
@@ -1637,11 +1637,11 @@ footer p {
 
 .project-modal-tags .tag {
     padding: 6px 14px;
-    background: var(--accent);
+    background: var(--accent-light);
     border: 1px solid var(--border);
     border-radius: 20px;
     font-size: 0.8rem;
-    color: var(--text-primary);
+    color: var(--bg-dark);
 }
 
 .project-modal-links {
@@ -1719,20 +1719,21 @@ footer p {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: var(--accent-primary);
-    color: var(--bg-darkest);
+    background: none;
+    color: var(--text-primary);
     border: none;
     cursor: pointer;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    padding-top: 8px;
     font-size: 1.5rem;
     z-index: 999;
     opacity: 0;
     visibility: hidden;
     transform: translateY(20px);
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(81, 163, 172, 0.4);
+    /* box-shadow: 0 4px 15px rgba(81, 163, 172, 0.4); */
 }
 
 .go-to-top.visible {
@@ -1745,6 +1746,61 @@ footer p {
     background: var(--accent-hover);
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(81, 163, 172, 0.6);
+}
+
+.go-to-top .flame-container {
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+}
+
+.go-to-top .flame {
+    width: 10px;
+    height: 16px;
+    background: linear-gradient(to top, #b700cb, #ff8c00, #ffd700);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: flicker 0.3s infinite alternate;
+    box-shadow: 0 0 10px #ff4500, 0 0 20px #ff8c00;
+}
+
+.go-to-top .flame:nth-child(1) {
+    width: 6px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.go-to-top .flame:nth-child(2) {
+    width: 12px;
+    height: 15px;
+    margin-top: -10px;
+    animation-delay: 0.1s;
+}
+
+.go-to-top .flame:nth-child(3) {
+    width: 18px;
+    height: 5px;
+    margin-top: -7px;
+    animation-delay: 0.2s;
+}
+
+@keyframes flicker {
+    0% {
+        transform: scaleY(1) scaleX(1) translateY(0);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scaleY(1.3) scaleX(0.8) translateY(-2px);
+        opacity: 1;
+    }
+    100% {
+        transform: scaleY(1.1) scaleX(0.9) translateY(-1px);
+        opacity: 0.9;
+    }
 }
 
 /* === EXPERIENCE - LinkedIn Style === */
