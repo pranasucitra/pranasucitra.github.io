@@ -1742,7 +1742,7 @@ footer p {
     transform: translateY(0);
 }
 
-.go-to-top:hover {
+.go-to-top:active {
     background: var(--accent-hover);
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(81, 163, 172, 0.6);
